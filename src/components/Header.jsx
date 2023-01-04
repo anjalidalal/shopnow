@@ -20,12 +20,11 @@ const Header = () => {
         <button>Cycles</button>
         <button>Accessories</button>
       </div>
-      <button>
+      <div>
         <img src={profile} alt="" width="28" height="28" />
-      </button>
-      <button>
+
         <img src={cart} alt="" width="28" height="28" />
-      </button>
+      </div>
     </div>
   );
 };
