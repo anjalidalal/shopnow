@@ -1,6 +1,6 @@
 import React from "react";
-import profile from "../icons/profile.png";
-import cart from "../icons/cart.png";
+import profile from "./icons/profile.png";
+import cart from "./icons/cart.png";
 
 const Header = () => {
   return (
