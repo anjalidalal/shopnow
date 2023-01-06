@@ -1,9 +1,9 @@
 import React from "react";
-import img7 from "../images/img7.jpg";
-import img2 from "../images/img2.jpg";
-import img8 from "../images/img8.jpg";
-import img3 from "../images/img3.webp";
-import img5 from "../images/img5.jpg";
+import img7 from "./images/img7.jpg";
+import img2 from "./images/img2.jpg";
+import img8 from "./images/img8.jpg";
+import img3 from "./images/img3.webp";
+import img5 from "./images/img5.jpg";
 
 const Carousel = () => {
   return (

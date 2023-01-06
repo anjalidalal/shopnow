@@ -90,4 +90,21 @@ body,
     justify-content: space-between;
     align-items: center;
   }
+  .cycle {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+  }
+  .cart {
+    width: 200px;
+    margin: 10px;
+  }
+  .cart > img {
+    width: 100%;
+    object-fit: contain;
+    height: 100px;
+  }
 }
