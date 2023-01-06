@@ -4,11 +4,12 @@ import img2 from "./images/img2.jpg";
 import img8 from "./images/img8.jpg";
 import img3 from "./images/img3.webp";
 import img5 from "./images/img5.jpg";
+import styles from "./carousel.module.css";
 
 const Carousel = () => {
   return (
-    <div className="carousel">
-      <div className="slide">
+    <div className={styles.carousel}>
+      <div className={styles.slide}>
         <img src={img5} alt="" />
         <img src={img7} alt="" />
         <img src={img3} alt="" />

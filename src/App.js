@@ -1,10 +1,16 @@
 import React from "react";
-import Home from "./components/Home";
+import Header from "./components/header/Header";
+import Carousel from "./components/carousel/Carousel";
+import Footer from "./components/footer/Footer";
+import Cycle from "./components/subcomponents/Cycle";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Header />
+      <Carousel />
+      <Cycle />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,0 +1,44 @@
+.carousel {
+  width: 100vw;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.slide {
+  display: flex;
+  animation: slide 16s infinite;
+  position: relative;
+}
+.slide > img {
+  min-width: 100vw;
+  height: 440px;
+  object-fit: cover;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}

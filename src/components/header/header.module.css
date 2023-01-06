@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: #fff;
+}
+.category {
+  display: none;
+}
+.category > button {
+  border: none;
+  background-color: transparent;
+  margin: 0px 10px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

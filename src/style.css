@@ -15,88 +15,9 @@ body,
   margin: auto;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.category {
-  display: none;
-}
-.category > button {
-  border: none;
-  background-color: transparent;
-  margin: 0px 10px;
-  font-weight: 600;
-}
-.carousel {
-  width: 100vw;
-  position: absolute;
-  margin-top: 19px;
-  top: 50%;
-  left: 50%;
-  overflow: hidden;
-  transform: translate(-50%, -50%);
-}
-.slide {
-  display: flex;
-  animation: slide 16s infinite;
-}
-.slide > img {
-  min-width: 100vw;
-  height: 92vh;
-  object-fit: cover;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  55% {
-    transform: translateX(-200%);
-  }
-  75% {
-    transform: translateX(-200%);
-  }
-  80% {
-    transform: translateX(-300%);
-  }
-  100% {
-    transform: translateX(-300%);
-  }
-}
-
-.footer {
-  background-color: #000;
-  color: #fff;
-}
-
 @media (min-width: 768px) {
-  .category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .cycle {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    width: 80vw;
     margin: auto;
-    position: relative;
   }
   .cart {
     width: 200px;

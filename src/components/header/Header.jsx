@@ -1,17 +1,18 @@
 import React from "react";
 import profile from "./icons/profile.png";
 import cart from "./icons/cart.png";
+import styles from "./header.module.css";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className={styles.header}>
       <img
         src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,ar_3.87,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cultsport-black-logo.svg"
         alt="cultsport-black-logo"
         width="100"
       />
 
-      <div className="category">
+      <div className={styles.category}>
         <button>Best Sellers</button>
         <button>Just Launched</button>
         <button>Men</button>
