@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Carousel />
       <Cycle />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

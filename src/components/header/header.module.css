@@ -3,12 +3,14 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
+  z-index: 99;
+  border-bottom: 1px solid lightgray;
 }
 .category {
   display: none;

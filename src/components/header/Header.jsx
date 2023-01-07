@@ -1,6 +1,4 @@
 import React from "react";
-import profile from "./icons/profile.png";
-import cart from "./icons/cart.png";
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -22,9 +20,9 @@ const Header = () => {
         <button>Accessories</button>
       </div>
       <div>
-        <img src={profile} alt="" width="28" height="28" />
+        <img src="./icons/profile.png" alt="" width="28" height="28" />
 
-        <img src={cart} alt="" width="28" height="28" />
+        <img src="./icons/cart.png" alt="" width="28" height="28" />
       </div>
     </div>
   );

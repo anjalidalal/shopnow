@@ -6,6 +6,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
+      off: " ₹40000",
       discount: "70% Off",
     },
     {
@@ -14,6 +15,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
+      off: " ₹30000",
       discount: "70% Off",
     },
     {
@@ -22,6 +24,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11000",
+      off: " ₹22000",
       discount: "40% Off",
     },
     {
@@ -30,6 +33,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹12000",
+      off: " ₹24000",
       discount: "70% Off",
     },
     {
@@ -38,6 +42,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹14000",
+      off: " ₹54000",
       discount: "60% Off",
     },
     {
@@ -46,6 +51,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹16000",
+      off: " ₹34000",
       discount: "50% Off",
     },
     {
@@ -54,6 +60,7 @@ let data = {
       brand: "Urban Terrain",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹19000",
+      off: " ₹30000",
       discount: "20% Off",
     },
   ],
