@@ -19,7 +19,7 @@ const Header = () => {
         <button>Cycles</button>
         <button>Accessories</button>
       </div>
-      <div>
+      <div className={styles.profile}>
         <img src="./icons/profile.png" alt="" width="28" height="28" />
 
         <img src="./icons/cart.png" alt="" width="28" height="28" />
