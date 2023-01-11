@@ -61,3 +61,11 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// https://dataplatform-webhook.curefit.co/production/cultsport-app-events
+
+// Request URL: https://cdn-account.optimonk.com/176432/accountInfo.json
+// Request Method: GET
+
+// Request URL: https://cultsport.com/api/page/cultsport?breadcrumb=true&seoPageId=cultsport
+// Request Method: GET
