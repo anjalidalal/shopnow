@@ -17,6 +17,7 @@ const Header = () => {
         <button>Women</button>
         <button>Cardio</button>
         <button>Cycles</button>
+        <button>Supplements</button>
         <button>Accessories</button>
       </div>
       <div className={styles.profile}>

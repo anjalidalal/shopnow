@@ -1,18 +1,16 @@
 import React from "react";
 import data from "../data";
 
-const Tshirts = () => {
-  console.log(data);
-  console.log(data.tshirts);
+const Bottomwear = () => {
   return (
-    <div className="article">
+    <div className="article" style={{ marginTop: "0px" }}>
       <p className="heading">
-        T-shirts <span className="view-all">view all</span>
+        Topwear <span className="view-all">view all</span>
       </p>
       <div className="cycle">
-        {data.tshirts.map((el) => (
+        {data.footwear.map((el) => (
           <div className="cart">
-            <img src={el.image} alt="something" />
+            <img src={el.image} alt="" />
             <span className="brand">{el.brand}</span>
             <p className="content">{el.content}</p>
             <p className="price">
@@ -26,4 +24,4 @@ const Tshirts = () => {
   );
 };
 
-export default Tshirts;
+export default Bottomwear;
