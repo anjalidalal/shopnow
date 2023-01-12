@@ -5,7 +5,7 @@ const Tshirts = () => {
   console.log(data);
   console.log(data.tshirts);
   return (
-    <div className="article">
+    <>
       <p className="heading">
         T-shirts <span className="view-all">view all</span>
       </p>
@@ -22,7 +22,7 @@ const Tshirts = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

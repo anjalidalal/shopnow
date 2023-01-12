@@ -14,12 +14,14 @@ const App = () => {
     <>
       <Header />
       <Carousel />
-      <Tshirts />
-      <Cycle />
-      <Topwear />
-      <Bottomwear />
-      <Supplements />
-      <Accessories />
+      <div className="article">
+        <Tshirts />
+        <Cycle />
+        <Topwear />
+        <Bottomwear />
+        <Supplements />
+        <Accessories />
+      </div>
       <Footer />
     </>
   );

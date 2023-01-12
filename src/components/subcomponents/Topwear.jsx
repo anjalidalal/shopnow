@@ -5,7 +5,7 @@ const Topwear = () => {
   console.log(data);
   console.log(data.cycles);
   return (
-    <div className="article" style={{ marginTop: "0px" }}>
+    <>
       <p className="heading">
         Topwear <span className="view-all">view all</span>
       </p>
@@ -22,7 +22,7 @@ const Topwear = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

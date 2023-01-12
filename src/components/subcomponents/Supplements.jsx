@@ -3,7 +3,7 @@ import data from "../data";
 
 const Supplements = () => {
   return (
-    <div className="article" style={{ marginTop: "0px" }}>
+    <>
       <p className="heading">
         Health & Nutrition <span className="view-all">view all</span>
       </p>
@@ -20,7 +20,7 @@ const Supplements = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

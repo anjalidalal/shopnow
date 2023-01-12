@@ -5,7 +5,7 @@ const Cycle = () => {
   console.log(data);
   console.log(data.cycles);
   return (
-    <div className="article" style={{ marginTop: "0px" }}>
+    <>
       <p className="heading">
         Cycles <span className="view-all">view all</span>
       </p>
@@ -22,7 +22,7 @@ const Cycle = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import data from "../data";
 
 const Bottomwear = () => {
   return (
-    <div className="article" style={{ marginTop: "0px" }}>
+    <>
       <p className="heading">
         Topwear <span className="view-all">view all</span>
       </p>
@@ -20,7 +20,7 @@ const Bottomwear = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
