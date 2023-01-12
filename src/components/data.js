@@ -129,7 +129,7 @@ let data = {
     },
   ],
 
-  treadmill: [
+  supplements: [
     {
       image:
         "https://gibbonnutrition.com/upload/img/muscle_whey_cafemocha1-min0.png",

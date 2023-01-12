@@ -8,7 +8,7 @@ const Supplements = () => {
         Health & Nutrition <span className="view-all">view all</span>
       </p>
       <div className="cycle">
-        {data.treadmill.map((el) => (
+        {data.supplements.map((el) => (
           <div className="cart">
             <img src={el.image} alt="" />
             <span className="brand">{el.brand}</span>

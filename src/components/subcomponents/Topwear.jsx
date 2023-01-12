@@ -2,8 +2,6 @@ import React from "react";
 import data from "../data";
 
 const Topwear = () => {
-  console.log(data);
-  console.log(data.cycles);
   return (
     <>
       <p className="heading">

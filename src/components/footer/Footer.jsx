@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
       <div>
         <div className={styles.storeBtn}>
-          <img src="./icons/play.png" alt="" />
+          <img src="./icons/apple.png" alt="" />
           <p>
             Download on the<span className={styles.store}>App Store</span>
           </p>
@@ -43,16 +43,16 @@ const Footer = () => {
             <img src="./icons/youtube.png" alt="" />
           </div>
           <div className={styles.logo}>
-            <img src="./icons/youtube.png" alt="" />
+            <img src="./icons/facebook.png" alt="" />
           </div>
           <div className={styles.logo}>
-            <img src="./icons/youtube.png" alt="" />
+            <img src="./icons/twitter.png" alt="" />
           </div>
           <div className={styles.logo}>
-            <img src="./icons/youtube.png" alt="" />
+            <img src="./icons/instagram.png" alt="" />
           </div>
           <div className={styles.logo}>
-            <img src="./icons/youtube.png" alt="" />
+            <img src="./icons/linkedin.png" alt="" />
           </div>
         </div>
       </div>
