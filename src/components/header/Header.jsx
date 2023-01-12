@@ -21,9 +21,9 @@ const Header = () => {
         <button>Accessories</button>
       </div>
       <div className={styles.profile}>
-        <img src="./icons/profile.png" alt="" width="28" height="28" />
+        <img src="./icons/profile.png" alt="" width="30" height="30" />
 
-        <img src="./icons/cart.png" alt="" width="28" height="28" />
+        <img src="./icons/cart.png" alt="" width="30" height="30" />
       </div>
     </div>
   );
