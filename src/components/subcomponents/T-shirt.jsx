@@ -2,8 +2,6 @@ import React from "react";
 import data from "../data";
 
 const Tshirts = () => {
-  console.log(data);
-  console.log(data.tshirts);
   return (
     <>
       <p className="heading">
@@ -11,7 +9,7 @@ const Tshirts = () => {
       </p>
       <div className="cycle">
         {data.tshirts.map((el) => (
-          <div className="cart">
+          <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
             <p className="content">{el.content}</p>

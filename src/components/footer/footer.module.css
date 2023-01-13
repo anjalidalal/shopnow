@@ -111,5 +111,13 @@ button {
 .ques {
   border-bottom: 1px solid #e2e4e8;
 }
+.answer {
+  width: 100%;
+  padding: 0 0 20px 0;
+  font-size: 14px;
+  color: #888e9e;
+  font-family: BrandonTextWeb-Medium, Helvetica Neue, Helvetica, Roboto, Arial,
+    sans-serif;
+}
 @media (min-width: 768px) {
 }

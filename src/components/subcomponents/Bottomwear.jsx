@@ -9,7 +9,7 @@ const Bottomwear = () => {
       </p>
       <div className="cycle">
         {data.footwear.map((el) => (
-          <div className="cart">
+          <div className="cart" key={el.id}>
             <img src={el.image} alt="" />
             <span className="brand">{el.brand}</span>
             <p className="content">{el.content}</p>
