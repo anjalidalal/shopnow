@@ -103,7 +103,7 @@ button {
   align-items: center;
   border: none;
 }
-.ques > div {
+.question {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,5 +119,38 @@ button {
   font-family: BrandonTextWeb-Medium, Helvetica Neue, Helvetica, Roboto, Arial,
     sans-serif;
 }
+.feedback {
+  font-size: 16px;
+  padding-right: 20px;
+  color: #888e9e;
+  padding: 20px 0 20px 0px;
+}
+.feedback > span {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ff3278;
+  padding: 0px 15px;
+}
 @media (min-width: 768px) {
+  .headingTwo {
+    font-weight: 600;
+  }
+  .twoQues {
+    font-weight: 500;
+  }
+  .faq {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  li {
+    width: 80%;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+  }
+  .answer {
+    padding: 0 0 15px 50px;
+    width: 60%;
+    font-size: 16px;
+  }
 }
