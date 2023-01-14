@@ -6,16 +6,18 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/Action";
 
 const AllProducts = () => {
-  const [cart, setCart] = useState();
+  const [cart, setCart] = useState([]);
   const dispatch = useDispatch();
 
   const handleCart = (id) => {
     localStorage.setItem("dataItem", JSON.stringify([...cart, { id: id }]));
     const data = JSON.parse(localStorage.getItem("dataItem"));
     setCart(data);
+    console.log(data);
     const action = addToCart(cart);
     dispatch(action);
   };
+  console.log(cart);
   return (
     <>
       <Header />
