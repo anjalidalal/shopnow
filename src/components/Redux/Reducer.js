@@ -1,6 +1,10 @@
 import { ADD_TO_CART } from "./ActionType";
 
-export const Reducer = (state, { type, payload }) => {
+const initialState = {
+  cart: [],
+};
+
+export const Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_TO_CART:
       return {

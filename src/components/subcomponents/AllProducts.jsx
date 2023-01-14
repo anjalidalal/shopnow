@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import data from "../data";
 import { useDispatch } from "react-redux";
-import { ADD_TO_CART } from "../Redux/ActionType";
+import { addToCart } from "../Redux/Action";
 
 const AllProducts = () => {
+  const [cart, setCart] = useState();
+  const dispatch = useDispatch();
+
+  const handleCart = (id) => {
+    const action = addToCart(id);
+    dispatch(action);
+  };
   return (
     <>
       <Header />
@@ -20,7 +27,10 @@ const AllProducts = () => {
               <span className="discount">{el.discount}</span>
             </p>
             <div className="buttons">
-              <button className="addToBag iconBtn">
+              <button
+                className="addToBag iconBtn"
+                onClick={() => handleCart(el.id)}
+              >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
@@ -47,7 +57,10 @@ const AllProducts = () => {
               <span className="discount">{el.discount}</span>
             </p>
             <div className="buttons">
-              <button className="addToBag iconBtn">
+              <button
+                className="addToBag iconBtn"
+                onClick={() => handleCart(el.id)}
+              >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
@@ -73,7 +86,10 @@ const AllProducts = () => {
               <span className="discount">{el.discount}</span>
             </p>
             <div className="buttons">
-              <button className="addToBag iconBtn">
+              <button
+                className="addToBag iconBtn"
+                onClick={() => handleCart(el.id)}
+              >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
@@ -99,7 +115,10 @@ const AllProducts = () => {
               <span className="discount">{el.discount}</span>
             </p>
             <div className="buttons">
-              <button className="addToBag iconBtn">
+              <button
+                className="addToBag iconBtn"
+                onClick={() => handleCart(el.id)}
+              >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
@@ -125,7 +144,10 @@ const AllProducts = () => {
               <span className="discount">{el.discount}</span>
             </p>
             <div className="buttons">
-              <button className="addToBag iconBtn">
+              <button
+                className="addToBag iconBtn"
+                onClick={() => handleCart(el.id)}
+              >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
@@ -151,7 +173,10 @@ const AllProducts = () => {
               <span className="discount">{el.discount}</span>
             </p>
             <div className="buttons">
-              <button className="addToBag iconBtn">
+              <button
+                className="addToBag iconBtn"
+                onClick={() => handleCart(el.id)}
+              >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
