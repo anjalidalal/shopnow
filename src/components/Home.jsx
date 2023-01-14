@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "..";
+import Header from "./header/Header";
 import Carousel from "./carousel/Carousel";
 import Footer from "./footer/Footer";
 import Cycle from "./subcomponents/Cycle";

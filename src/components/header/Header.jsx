@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -11,7 +12,9 @@ const Header = () => {
       />
 
       <div className={styles.category}>
-        <button>Best Sellers</button>
+        <Link to="/all-products">
+          <button>Best Sellers</button>
+        </Link>
         <button>Just Launched</button>
         <button>Men</button>
         <button>Women</button>
@@ -21,9 +24,12 @@ const Header = () => {
         <button>Accessories</button>
       </div>
       <div className={styles.profile}>
-        <img src="./icons/profile.png" alt="" width="30" height="30" />
-
-        <img src="./icons/cart.png" alt="" width="30" height="30" />
+        <Link to="/profile">
+          <img src="./icons/profile.png" alt="" width="30" height="30" />
+        </Link>
+        <Link to="/add-to-cart">
+          <img src="./icons/cart.png" alt="" width="30" height="30" />
+        </Link>
       </div>
     </div>
   );

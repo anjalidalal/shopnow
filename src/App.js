@@ -1,10 +1,11 @@
 import React from "react";
-import Home from "./src/components/Home";
+import Home from "./components/Home";
+import Routers from "./components/Routers";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Routers />
     </>
   );
 };
