@@ -13,15 +13,29 @@ const Header = () => {
 
       <div className={styles.category}>
         <Link to="/all-products">
-          <button>Best Sellers</button>
+          <button className={styles.btn}>Best Sellers</button>
         </Link>
-        <button>Just Launched</button>
-        <button>Men</button>
-        <button>Women</button>
-        <button>Cardio</button>
-        <button>Cycles</button>
-        <button>Supplements</button>
-        <button>Accessories</button>
+        <Link to="/just-launched">
+          <button className={styles.btn}>Just Launched</button>
+        </Link>
+        <Link to="/men">
+          <button className={styles.btn}>Men</button>
+        </Link>
+        <Link to="/women">
+          <button className={styles.btn}>Women</button>
+        </Link>
+        <Link to="/supplements">
+          <button className={styles.btn}>Cardio</button>
+        </Link>
+        <Link to="/cycle">
+          <button className={styles.btn}>Cycles</button>
+        </Link>
+        <Link to="/supplements">
+          <button className={styles.btn}>Supplements</button>
+        </Link>
+        <Link to="/accessories">
+          <button className={styles.btn}>Accessories</button>
+        </Link>
       </div>
       <div className={styles.profile}>
         <Link to="/profile">

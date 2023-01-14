@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import data from "../data";
 
 const Cycle = () => {
   return (
     <>
       <p className="heading">
-        Cycles <span className="view-all">view all</span>
+        Cycles{" "}
+        <Link to="/all-products">
+          <span className="view-all">view all</span>
+        </Link>
       </p>
       <div className="cycle">
         {data.cycles.map((el) => (

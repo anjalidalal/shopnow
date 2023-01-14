@@ -356,7 +356,7 @@ let data = {
       id: nanoid(),
     },
   ],
-  footwear: [
+  bottomwear: [
     {
       id: nanoid(),
       image:

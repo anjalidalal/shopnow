@@ -15,7 +15,7 @@
 .category {
   display: none;
 }
-.category > button {
+.btn {
   border: none;
   background-color: transparent;
   margin: 0px 10px;

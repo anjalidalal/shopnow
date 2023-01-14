@@ -75,6 +75,37 @@ body,
 .article {
   margin-top: 450px;
 }
+.allProducts {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto;
+  margin-bottom: 30px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.whislist {
+  border: 1px solid black;
+  height: 40px;
+}
+.iconBtn {
+  padding: 10px;
+  text-transform: uppercase;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+.addToBag {
+  height: 40px;
+  background-color: #ff3278;
+  color: #fff;
+}
 
 @media (min-width: 768px) {
   .article {
@@ -101,5 +132,10 @@ body,
   }
   .view-all {
     font-size: 18px;
+  }
+  .allProducts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
   }
 }
