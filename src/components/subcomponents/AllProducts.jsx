@@ -10,7 +10,10 @@ const AllProducts = () => {
   const dispatch = useDispatch();
 
   const handleCart = (id) => {
-    const action = addToCart(id);
+    localStorage.setItem("dataItem", JSON.stringify([...cart, { id: id }]));
+    const data = JSON.parse(localStorage.getItem("dataItem"));
+    setCart(data);
+    const action = addToCart(cart);
     dispatch(action);
   };
   return (

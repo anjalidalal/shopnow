@@ -1,7 +1,7 @@
 import { ADD_TO_CART } from "./ActionType";
 
 const initialState = {
-  cart: [],
+  data: [],
 };
 
 export const Reducer = (state = initialState, { type, payload }) => {
@@ -9,6 +9,7 @@ export const Reducer = (state = initialState, { type, payload }) => {
     case ADD_TO_CART:
       return {
         ...state,
+        daat: [...state.data, payload],
       };
     default:
       return state;
