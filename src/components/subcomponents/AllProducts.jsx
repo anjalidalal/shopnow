@@ -5,9 +5,11 @@ import dataObj from "../data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/Action";
 import heart from "./heart.png";
+import pink from "./pink.png";
 
 const AllProducts = () => {
   const [cart, setCart] = useState([]);
+  const [whislist, setWishlist] = useState(false);
   const dispatch = useDispatch();
 
   const handleCart = (data) => {
@@ -34,7 +36,7 @@ const AllProducts = () => {
             </p>
             <div className="buttons">
               <button
-                className="addToBag iconBtn"
+                className="addToBag"
                 onClick={() => {
                   const data = {
                     image: el.image,
@@ -51,9 +53,17 @@ const AllProducts = () => {
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
-              <button className="whislist iconBtn">
-                <img src={heart} width="20px" height="20px" alt="" />
-                Whislist
+              <button
+                className={whislist ? "whislisted" : "whislist"}
+                onClick={() => setWishlist(!whislist)}
+              >
+                <img
+                  src={whislist ? pink : heart}
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                {whislist ? "Whislisted" : "Whislist"}
               </button>
             </div>
           </div>

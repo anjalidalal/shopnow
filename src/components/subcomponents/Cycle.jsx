@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import dataObj from "../data";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 const Cycle = () => {
   return (

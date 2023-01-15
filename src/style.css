@@ -90,11 +90,7 @@ button {
   align-items: center;
   margin-top: 15px;
 }
-.whislist {
-  border: 1px solid black;
-  height: 40px;
-}
-.iconBtn {
+.buttons > button {
   padding: 10px;
   text-transform: uppercase;
   display: flex;
@@ -104,6 +100,19 @@ button {
   font-weight: 500;
   font-size: 14px;
 }
+.whislist {
+  border: 1px solid black;
+  height: 40px;
+  width: 130px;
+}
+.whislisted {
+  border: 1px solid #5e6064;
+  background-color: #5e6064;
+  color: #fff;
+  height: 40px;
+  width: 130px;
+}
+
 .addToBag {
   height: 40px;
   background-color: #ff3278;
