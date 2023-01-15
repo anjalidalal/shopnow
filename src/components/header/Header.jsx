@@ -5,12 +5,13 @@ import styles from "./header.module.css";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <img
-        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,ar_3.87,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cultsport-black-logo.svg"
-        alt="cultsport-black-logo"
-        width="120"
-      />
-
+      <Link to="/">
+        <img
+          src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,ar_3.87,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cultsport-black-logo.svg"
+          alt="cultsport-black-logo"
+          width="120"
+        />
+      </Link>
       <div className={styles.category}>
         <Link to="/all-products">
           <button className={styles.btn}>Best Sellers</button>

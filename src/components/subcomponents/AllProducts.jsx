@@ -1,28 +1,29 @@
 import React, { useState } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import data from "../data";
+import dataObj from "../data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/Action";
+import heart from "./heart.png";
 
 const AllProducts = () => {
   const [cart, setCart] = useState([]);
   const dispatch = useDispatch();
 
-  const handleCart = (id) => {
-    localStorage.setItem("dataItem", JSON.stringify([...cart, { id: id }]));
-    const data = JSON.parse(localStorage.getItem("dataItem"));
+  const handleCart = (data) => {
+    alert("Added to cart");
     setCart(data);
-    console.log(data);
+    localStorage.setItem("dataItem", JSON.stringify([...cart, data]));
+    const cartData = JSON.parse(localStorage.getItem("dataItem"));
+    setCart(cartData);
     const action = addToCart(cart);
     dispatch(action);
   };
-  console.log(cart);
   return (
     <>
       <Header />
       <div className="allProducts" style={{ marginTop: "120px" }}>
-        {data.tshirts.map((el) => (
+        {dataObj.tshirts.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
@@ -34,25 +35,31 @@ const AllProducts = () => {
             <div className="buttons">
               <button
                 className="addToBag iconBtn"
-                onClick={() => handleCart(el.id)}
+                onClick={() => {
+                  const data = {
+                    image: el.image,
+                    id: el.id,
+                    brand: el.brand,
+                    content: el.content,
+                    price: el.content,
+                    off: el.off,
+                    discount: el.discount,
+                  };
+                  handleCart(data);
+                }}
               >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
               <button className="whislist iconBtn">
-                <img
-                  src="./icons/heart.png"
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
+                <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
             </div>
           </div>
         ))}
 
-        {data.topwear.map((el) => (
+        {dataObj.topwear.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
@@ -64,24 +71,30 @@ const AllProducts = () => {
             <div className="buttons">
               <button
                 className="addToBag iconBtn"
-                onClick={() => handleCart(el.id)}
+                onClick={() => {
+                  const data = {
+                    image: el.image,
+                    id: el.id,
+                    brand: el.brand,
+                    content: el.content,
+                    price: el.content,
+                    off: el.off,
+                    discount: el.discount,
+                  };
+                  handleCart(data);
+                }}
               >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
               <button className="whislist iconBtn">
-                <img
-                  src="./icons/heart.png"
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
+                <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
             </div>
           </div>
         ))}
-        {data.bottomwear.map((el) => (
+        {dataObj.bottomwear.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
@@ -93,24 +106,30 @@ const AllProducts = () => {
             <div className="buttons">
               <button
                 className="addToBag iconBtn"
-                onClick={() => handleCart(el.id)}
+                onClick={() => {
+                  const data = {
+                    image: el.image,
+                    id: el.id,
+                    brand: el.brand,
+                    content: el.content,
+                    price: el.content,
+                    off: el.off,
+                    discount: el.discount,
+                  };
+                  handleCart(data);
+                }}
               >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
               <button className="whislist iconBtn">
-                <img
-                  src="./icons/heart.png"
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
+                <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
             </div>
           </div>
         ))}
-        {data.accessories.map((el) => (
+        {dataObj.accessories.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
@@ -122,24 +141,30 @@ const AllProducts = () => {
             <div className="buttons">
               <button
                 className="addToBag iconBtn"
-                onClick={() => handleCart(el.id)}
+                onClick={() => {
+                  const data = {
+                    image: el.image,
+                    id: el.id,
+                    brand: el.brand,
+                    content: el.content,
+                    price: el.content,
+                    off: el.off,
+                    discount: el.discount,
+                  };
+                  handleCart(data);
+                }}
               >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
               <button className="whislist iconBtn">
-                <img
-                  src="./icons/heart.png"
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
+                <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
             </div>
           </div>
         ))}
-        {data.supplements.map((el) => (
+        {dataObj.supplements.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
@@ -151,24 +176,30 @@ const AllProducts = () => {
             <div className="buttons">
               <button
                 className="addToBag iconBtn"
-                onClick={() => handleCart(el.id)}
+                onClick={() => {
+                  const data = {
+                    image: el.image,
+                    id: el.id,
+                    brand: el.brand,
+                    content: el.content,
+                    price: el.content,
+                    off: el.off,
+                    discount: el.discount,
+                  };
+                  handleCart(data);
+                }}
               >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
               <button className="whislist iconBtn">
-                <img
-                  src="./icons/heart.png"
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
+                <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
             </div>
           </div>
         ))}
-        {data.cycles.map((el) => (
+        {dataObj.cycles.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
@@ -180,18 +211,24 @@ const AllProducts = () => {
             <div className="buttons">
               <button
                 className="addToBag iconBtn"
-                onClick={() => handleCart(el.id)}
+                onClick={() => {
+                  const data = {
+                    image: el.image,
+                    id: el.id,
+                    brand: el.brand,
+                    content: el.content,
+                    price: el.content,
+                    off: el.off,
+                    discount: el.discount,
+                  };
+                  handleCart(data);
+                }}
               >
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
               <button className="whislist iconBtn">
-                <img
-                  src="./icons/heart.png"
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
+                <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
             </div>

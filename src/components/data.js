@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 
-let data = {
+let dataObj = {
   cycles: [
     {
       image:
@@ -429,4 +429,4 @@ let data = {
   ],
 };
 
-export default data;
+export default dataObj;

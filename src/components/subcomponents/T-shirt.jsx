@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import data from "../data";
+import dataObj from "../data";
 
 const Tshirts = () => {
   return (
@@ -12,7 +12,7 @@ const Tshirts = () => {
         </Link>
       </p>
       <div className="cycle">
-        {data.tshirts.map((el) => (
+        {dataObj.tshirts.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />
             <span className="brand">{el.brand}</span>
