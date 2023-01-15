@@ -19,7 +19,7 @@ const Routers = () => {
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/add-to-cart" element={<AddToCart />} />
-        <Route path="/cycles" element={<Cycle />} />
+        <Route path="/cycle" element={<Cycle />} />
         <Route path="/just-launched" element={<Topwear />} />
         <Route path="/men" element={<Tshirts />} />
         <Route path="/women" element={<Bottomwear />} />
