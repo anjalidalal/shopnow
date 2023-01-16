@@ -40,29 +40,3 @@
     transform: translateX(-300%);
   }
 }
-@media (min-width: 768px) {
-  .carousel {
-    top: 50%;
-  }
-}
-@media (min-width: 1024px) {
-  .carousel {
-    top: 41%;
-  }
-}
-@media (min-width: 1440px) {
-  .carousel {
-    top: 35%;
-  }
-}
-@media (min-width: 1985px) {
-  .carousel {
-    top: 27%;
-  }
-}
-
-@media (min-width: 2560px) {
-  .carousel {
-    top: 19%;
-  }
-}
