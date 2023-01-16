@@ -6,14 +6,13 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div>
-        <button className="login-provider-button" onClick={signInWithGoogle}>
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/google-logo.png"
-            alt="google icon"
-          />
-          <span> Continue with Google</span>
+      <div style={{ marginTop: "95px" }} className="signInContainer">
+        <button onClick={signInWithGoogle} className="signin">
+          Sign in with Google
         </button>
+        <h2>{localStorage.getItem("name")}</h2>
+        <p>{localStorage.getItem("email")}</p>
+        <img src={localStorage.getItem("photo")} className="profilePhoto" />
       </div>
     </>
   );

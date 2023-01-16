@@ -90,7 +90,8 @@ button {
   display: flex;
   overflow-x: auto;
 }
-.slider > button {
+.slider > button,
+.signin {
   padding: 5px 10px;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.283);
@@ -153,6 +154,22 @@ button {
   gap: 30px;
   grid-template-columns: auto;
   margin-bottom: 30px;
+}
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.profilePhoto {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
 @media (min-width: 768px) {
   .article {
