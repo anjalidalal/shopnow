@@ -85,6 +85,27 @@ button {
 .article {
   margin-top: 450px;
 }
+.slider {
+  margin: 70px 10px 20px 10px;
+  width: 300px;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: auto;
+}
+.slider > button {
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.283);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
 .allProducts {
   display: grid;
   gap: 30px;
@@ -143,6 +164,9 @@ button {
   .cycle {
     width: 90vw;
     gap: 20px;
+  }
+  .slider {
+    width: 95vw;
   }
   .cart {
     width: 330px;

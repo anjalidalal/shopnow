@@ -292,7 +292,7 @@ let dataObj = {
       id: nanoid(),
       image:
         "https://i5.walmartimages.com/asr/48f7c3b5-d66e-459f-8adc-600e8e2bb53f.fea0ca81f17b6562d9a5d59dd1ac7c7d.jpeg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       off: " ₹40000",
@@ -300,7 +300,7 @@ let dataObj = {
     },
     {
       image: "https://pa.namshicdn.com/product/A2/77387W/1-zoom-desktop.jpg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       off: " ₹30000",
@@ -309,7 +309,7 @@ let dataObj = {
     },
     {
       image: "https://m.media-amazon.com/images/I/61aRKn7NXDL.jpg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       id: nanoid(),
@@ -321,7 +321,7 @@ let dataObj = {
       id: nanoid(),
       image:
         "https://media.karousell.com/media/photos/products/2020/7/9/original_reebok_yoga_mats_1594262618_5c878db8_progressive.jpg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       off: " ₹30000",
@@ -330,7 +330,7 @@ let dataObj = {
     {
       id: nanoid(),
       image: "https://m.media-amazon.com/images/I/61Z5T--en-L._SL1500_.jpg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       off: " ₹30000",
@@ -339,7 +339,7 @@ let dataObj = {
     {
       image:
         "https://5.imimg.com/data5/HM/RT/MY-15732872/sport-socks-500x500.jpeg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       off: " ₹30000",
@@ -348,7 +348,7 @@ let dataObj = {
     },
     {
       image: "https://pa.namshicdn.com/product/A2/34556W/1-zoom-desktop.jpg",
-      brand: "Urban Terrain",
+      brand: "Fitkit",
       content: "UT1000, Black, Steel MTB 27.5 T Shimano Geared Mountain Cycle",
       price: " ₹11999",
       off: " ₹30000",

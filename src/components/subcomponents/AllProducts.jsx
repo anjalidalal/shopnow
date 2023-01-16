@@ -20,7 +20,25 @@ const AllProducts = () => {
   return (
     <>
       <Header />
-      <div className="allProducts" style={{ marginTop: "120px" }}>
+      <div className="slider">
+        <button>Male</button>
+        <button>Female</button>
+        <button>T-shirts</button>
+        <button>Topwear</button>
+        <button>Bottom Wear</button>
+        <button>Cycles</button>
+        <button>Accessories</button>
+        <button>Supplements</button>
+        <button>Roadster</button>
+        <button>Cultsport</button>
+        <button>Urban Terrain</button>
+        <button>Fitkit</button>
+        <button>Discount Products</button>
+        <button>Brand</button>
+        <button>High Price</button>
+        <button>Low Price</button>
+      </div>
+      <div className="allProducts">
         {dataObj.tshirts.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="something" />

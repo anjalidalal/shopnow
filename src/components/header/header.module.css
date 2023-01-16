@@ -3,13 +3,13 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: #fff;
   z-index: 99;
+  padding: 10px 15px;
   border-bottom: 1px solid lightgray;
 }
 .category {
@@ -22,6 +22,13 @@
   font-size: 15px;
   font-weight: 600;
 }
+.btn:focus {
+  /* border-bottom: 3px solid rgb(33, 165, 247); */
+  /* transform: scale(1.3); */
+  color: #ff3278;
+  font-weight: 800;
+}
+
 .profile,
 .bag {
   margin: 0px 0px 0px 10px;
