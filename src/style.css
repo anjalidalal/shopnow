@@ -82,9 +82,7 @@ button {
   font-style: oblique;
   width: 300px;
 }
-.article {
-  margin-top: 450px;
-}
+
 .slider {
   margin: 70px 10px 20px 10px;
   width: 300px;
@@ -158,7 +156,6 @@ button {
 }
 @media (min-width: 768px) {
   .article {
-    margin: 492px 30px 20px 30px;
     width: 90vw;
   }
   .cycle {
