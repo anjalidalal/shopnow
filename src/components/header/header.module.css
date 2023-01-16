@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +22,8 @@
   font-size: 15px;
   font-weight: 600;
 }
-.profile > img {
+.profile,
+.bag {
   margin: 0px 0px 0px 10px;
 }
 a {

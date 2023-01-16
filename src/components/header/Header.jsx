@@ -38,12 +38,24 @@ const Header = () => {
           <button className={styles.btn}>Accessories</button>
         </Link>
       </div>
-      <div className={styles.profile}>
+      <div className={styles.icons}>
         <Link to="/profile">
-          <img src="./icons/profile.png" alt="" width="30" height="30" />
+          <img
+            src="./icons/profile.png"
+            alt=""
+            width="30"
+            height="30"
+            className={styles.profile}
+          />
         </Link>
         <Link to="/add-to-cart">
-          <img src="./icons/cart.png" alt="" width="30" height="30" />
+          <img
+            src="./icons/cart.png"
+            alt=""
+            width="30"
+            height="30"
+            className={styles.bag}
+          />
         </Link>
       </div>
     </div>

@@ -4,13 +4,12 @@ import { useSelector } from "react-redux";
 
 const AddToCart = () => {
   // const data = useSelector((store) => store.data);
-  const data = JSON.parse(localStorage.getItem("dataItem"));
-  console.log(data);
+
   return (
     <>
       <Header />
       <div className="container">
-        {data.map((el) => (
+        {/* {data.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="" />
             <span className="brand">{el.brand}</span>
@@ -18,9 +17,9 @@ const AddToCart = () => {
             <p className="price">
               {el.price} <span className="off">{el.off}</span>{" "}
               <span className="discount">{el.discount}</span>
-            </p>
-          </div>
-        ))}
+            </p> */}
+        {/* </div>
+        ))} */}
       </div>
     </>
   );

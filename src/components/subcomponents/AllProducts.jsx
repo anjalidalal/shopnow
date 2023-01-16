@@ -8,17 +8,11 @@ import heart from "./heart.png";
 import pink from "./pink.png";
 
 const AllProducts = () => {
-  const [cart, setCart] = useState([]);
   const [whislist, setWishlist] = useState(false);
   const dispatch = useDispatch();
 
   const handleCart = (data) => {
-    alert("Added to cart");
-    setCart(data);
-    localStorage.setItem("dataItem", JSON.stringify([...cart, data]));
-    const cartData = JSON.parse(localStorage.getItem("dataItem"));
-    setCart(cartData);
-    const action = addToCart(cart);
+    const action = addToCart(data);
     dispatch(action);
   };
   return (

@@ -1,4 +1,9 @@
 import { createStore } from "redux";
 import { Reducer } from "./Reducer";
 
-export const store = createStore(Reducer);
+console.log("hello");
+
+export const store = createStore(
+  Reducer,
+  window.REDUX_DEVTOOLS_EXTENSION && window.REDUX_DEVTOOLS_EXTENSION()
+);
