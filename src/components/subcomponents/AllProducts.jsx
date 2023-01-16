@@ -12,9 +12,11 @@ const AllProducts = () => {
   const dispatch = useDispatch();
 
   const handleCart = (data) => {
+    alert("Added to bag");
     const action = addToCart(data);
     dispatch(action);
   };
+
   return (
     <>
       <Header />

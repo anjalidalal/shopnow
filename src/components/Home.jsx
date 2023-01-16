@@ -2,12 +2,8 @@ import React from "react";
 import Header from "./header/Header";
 import Carousel from "./carousel/Carousel";
 import Footer from "./footer/Footer";
-import Cycle from "./subcomponents/Cycle";
-import Tshirts from "./subcomponents/T-shirt";
-import Supplements from "./subcomponents/Supplements";
-import Topwear from "./subcomponents/Topwear";
-import Accessories from "./subcomponents/Accessories";
-import Bottomwear from "./subcomponents/Bottomwear";
+import Cart from "./subcomponents/Cart";
+import dataObj from "./data";
 
 const Home = () => {
   return (
@@ -15,12 +11,12 @@ const Home = () => {
       <Header />
       <Carousel />
       <div className="article">
-        <Tshirts />
-        <Cycle />
-        <Topwear />
-        <Bottomwear />
-        <Supplements />
-        <Accessories />
+        <Cart obj={dataObj.tshirts} title={"T-shirts"} />
+        <Cart obj={dataObj.topwear} title={"Topwear"} />
+        <Cart obj={dataObj.bottomwear} title={"Bottom Wear"} />
+        <Cart obj={dataObj.cycles} title={"Cycle"} />
+        <Cart obj={dataObj.supplements} title={"Supplements"} />
+        <Cart obj={dataObj.accessories} title={"Accessories"} />
       </div>
       <Footer />
     </>

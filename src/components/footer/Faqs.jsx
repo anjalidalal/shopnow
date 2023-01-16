@@ -24,7 +24,7 @@ const Faqs = () => {
         <p className={styles.twoQues}>2 questions</p>
       </div>
       <div className={styles.ques}>
-        <div className={styles.question}>
+        <div className={styles.question} onClick={handleAnswer}>
           <li>What is cultsport and what does it offer?</li>
           <button onClick={handleAnswer}>
             <img
@@ -53,9 +53,9 @@ const Faqs = () => {
         )}
       </div>
       <div className={styles.ques}>
-        <div className={styles.question}>
+        <div className={styles.question} onClick={handleAnswer2}>
           <li>What makes cultsport special?</li>
-          <button onClick={handleAnswer2}>
+          <button>
             <img
               src={showAnswer2 ? collapse : expand}
               alt=""

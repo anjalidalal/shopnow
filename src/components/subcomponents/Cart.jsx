@@ -1,18 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import dataObj from "../data";
 
-const Topwear = () => {
+const Cart = ({ obj, title }) => {
   return (
     <>
       <p className="heading">
-        Topwear{" "}
+        {title}
         <Link to="/all-products">
           <span className="view-all">view all</span>
         </Link>
       </p>
       <div className="cycle">
-        {dataObj.topwear.map((el) => (
+        {obj.map((el) => (
           <div className="cart" key={el.id}>
             <img src={el.image} alt="" />
             <span className="brand">{el.brand}</span>
@@ -28,4 +27,4 @@ const Topwear = () => {
   );
 };
 
-export default Topwear;
+export default Cart;

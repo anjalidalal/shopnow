@@ -26,9 +26,16 @@ button {
   margin-bottom: 50px;
 }
 .cart {
+  cursor: pointer;
   width: 300px;
   scroll-snap-align: start;
   flex-shrink: 0;
+  padding-bottom: 15px;
+  background-color: hsl(0, 0%, 100%);
+}
+.cart:hover {
+  box-shadow: 1px 2px 6px rgb(0 0 0 / 30%);
+  transform: scale(1.03);
 }
 .cart > img {
   width: 100%;
@@ -117,6 +124,9 @@ button {
   height: 40px;
   background-color: #ff3278;
   color: #fff;
+}
+.addToBag:active {
+  background-color: #5e6064ee;
 }
 .container {
   margin-top: 100px;

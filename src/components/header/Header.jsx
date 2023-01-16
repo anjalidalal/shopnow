@@ -16,27 +16,20 @@ const Header = () => {
         <Link to="/all-products">
           <button className={styles.btn}>Best Sellers</button>
         </Link>
-        <Link to="/just-launched">
-          <button className={styles.btn}>Just Launched</button>
-        </Link>
-        <Link to="/men">
-          <button className={styles.btn}>Men</button>
-        </Link>
-        <Link to="/women">
-          <button className={styles.btn}>Women</button>
-        </Link>
-        <Link to="/supplements">
-          <button className={styles.btn}>Cardio</button>
-        </Link>
-        <Link to="/cycle">
-          <button className={styles.btn}>Cycles</button>
-        </Link>
-        <Link to="/supplements">
-          <button className={styles.btn}>Supplements</button>
-        </Link>
-        <Link to="/accessories">
-          <button className={styles.btn}>Accessories</button>
-        </Link>
+
+        <button className={styles.btn}>Just Launched</button>
+
+        <button className={styles.btn}>Men</button>
+
+        <button className={styles.btn}>Women</button>
+
+        <button className={styles.btn}>Cardio</button>
+
+        <button className={styles.btn}>Cycles</button>
+
+        <button className={styles.btn}>Supplements</button>
+
+        <button className={styles.btn}>Accessories</button>
       </div>
       <div className={styles.icons}>
         <Link to="/profile">
