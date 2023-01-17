@@ -28,9 +28,14 @@
   color: #ff3278;
   font-weight: 800;
 }
-
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .profile,
-.bag {
+.bag,
+.menu {
   margin: 0px 0px 0px 10px;
 }
 a {
@@ -43,5 +48,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .menu {
+    display: none;
   }
 }

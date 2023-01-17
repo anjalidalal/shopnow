@@ -50,6 +50,14 @@ const Header = () => {
             className={styles.bag}
           />
         </Link>
+        <Link>
+          <img
+            src="./icons/menu.png"
+            className={styles.menu}
+            width="30"
+            height="34"
+          />
+        </Link>
       </div>
     </div>
   );
