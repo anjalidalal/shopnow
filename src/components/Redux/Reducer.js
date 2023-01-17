@@ -1,6 +1,8 @@
 import { ADD_TO_CART } from "./ActionType";
+import { GET_USER } from "./ActionType";
 
 const initialState = {
+  user: null,
   data: [],
 };
 export const Reducer = (state = initialState, { type, payload }) => {
@@ -10,6 +12,12 @@ export const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         data: [...state.data, payload],
       };
+    case GET_USER:
+      return {
+        ...state,
+        user: payload,
+      };
+
     default:
       return state;
   }

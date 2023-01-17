@@ -1,6 +1,13 @@
 import { initializeApp } from "firebase/app";
-// import "firebase/auth";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getUser } from "../components/Redux/Action";
+import { useDispatch } from "react-redux";
+import { store } from "../components/Redux/Store";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5FgPgj7GoSG0Uq6uEuJc9FemjWRxmYAk",
@@ -19,16 +26,33 @@ const provider = new GoogleAuthProvider();
 export const signInWithGoogle = () => {
   signInWithPopup(auth, provider)
     .then((result) => {
-      console.log(result);
-      const name = result.user.displayName;
-      const email = result.user.email;
-      const photo = result.user.photoURL;
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
-      localStorage.setItem("photo", photo);
-      console.log(name, email, photo);
+      // console.log(result);
+      // const name = result.user.displayName;
+      // const email = result.user.email;
+      // const photo = result.user.photoURL;
+      store.dispatch(
+        getUser({
+          displayName: result.user.displayName,
+          email: result.user.email,
+          photo: result.user.photoURL,
+        })
+      );
+
+      // localStorage.setItem("name", name);
+      // localStorage.setItem("email", email);
+      // localStorage.setItem("photo", photo);
+      //console.log(name, email, photo);
     })
     .catch((error) => {
       console.log(error);
     });
 };
+
+// export const signOut = async () => {
+//   try {
+//     await firebase.auth().signOut();
+//     store.dispatch(getUser(null));
+//   } catch (error) {
+//     store.dispatch(getUser(null));
+//   }
+// };
