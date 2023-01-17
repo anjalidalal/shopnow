@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header/Header";
-import { signInWithGoogle } from "../services/firebase";
+import { signInWithGoogle, signOutFunc } from "../services/firebase";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
@@ -23,7 +23,9 @@ const Profile = () => {
           </div>
         )}
 
-        <button className="signin">Sign Out</button>
+        <button className="signin" onClick={signOutFunc}>
+          Sign Out
+        </button>
       </div>
     </>
   );

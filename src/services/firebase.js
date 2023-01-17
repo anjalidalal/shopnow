@@ -48,7 +48,15 @@ export const signInWithGoogle = () => {
     });
 };
 
-// export const signOut = async () => {
+export const signOutFunc = () => {
+  signOut(auth, provider)
+    .then((result) => {
+      store.dispatch(getUser(null));
+    })
+    .catch((error) => {
+      store.dispatch(getUser(null));
+    });
+};
 //   try {
 //     await firebase.auth().signOut();
 //     store.dispatch(getUser(null));
