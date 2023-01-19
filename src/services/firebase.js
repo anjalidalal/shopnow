@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getUser } from "../components/Redux/Action";
-import { useDispatch } from "react-redux";
+
+import { getFirestore } from "firebase/firestore";
 import { store } from "../components/Redux/Store";
 import {
   getAuth,
