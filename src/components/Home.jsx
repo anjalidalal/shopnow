@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Carousel />
       <div className="article">
         <Cart obj={dataObj.tshirts} title={"T-shirts"} />
         <Cart obj={dataObj.topwear} title={"Topwear"} />

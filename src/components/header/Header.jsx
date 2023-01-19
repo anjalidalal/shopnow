@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Carousel from "../carousel/Carousel";
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -9,6 +10,32 @@ const Header = () => {
   };
   return (
     <>
+      <div className={className}>
+        <Link to="/all-products">
+          <button className={styles.btn}>Best Sellers</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Just Launched</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Men</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Women</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Cardio</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Cycles</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Supplements</button>
+        </Link>
+        <Link to="/all-products">
+          <button className={styles.btn}>Accessories</button>
+        </Link>
+      </div>
       <div className={styles.header}>
         <Link to="/">
           <img
@@ -66,32 +93,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={className}>
-        <Link to="/all-products">
-          <button className={styles.btn}>Best Sellers</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Just Launched</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Men</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Women</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Cardio</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Cycles</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Supplements</button>
-        </Link>
-        <Link to="/all-products">
-          <button className={styles.btn}>Accessories</button>
-        </Link>
-      </div>
+
+      <Carousel />
     </>
   );
 };
