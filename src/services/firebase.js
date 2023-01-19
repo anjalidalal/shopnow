@@ -8,6 +8,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5FgPgj7GoSG0Uq6uEuJc9FemjWRxmYAk",
@@ -37,7 +38,8 @@ export const signInWithGoogle = () => {
           photo: result.user.photoURL,
         })
       );
-
+      const id = result.user.uid;
+      console.log(id);
       // localStorage.setItem("name", name);
       // localStorage.setItem("email", email);
       // localStorage.setItem("photo", photo);
