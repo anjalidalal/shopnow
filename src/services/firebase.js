@@ -21,6 +21,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
@@ -36,10 +37,9 @@ export const signInWithGoogle = () => {
           displayName: result.user.displayName,
           email: result.user.email,
           photo: result.user.photoURL,
+          id: result.user.uid,
         })
       );
-      const id = result.user.uid;
-      console.log(id);
       // localStorage.setItem("name", name);
       // localStorage.setItem("email", email);
       // localStorage.setItem("photo", photo);
@@ -59,10 +59,3 @@ export const signOutFunc = () => {
       store.dispatch(getUser(null));
     });
 };
-//   try {
-//     await firebase.auth().signOut();
-//     store.dispatch(getUser(null));
-//   } catch (error) {
-//     store.dispatch(getUser(null));
-//   }
-// };

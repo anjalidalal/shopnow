@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "../carousel/Carousel";
 import styles from "./header.module.css";
+import menu from "./menu.png";
+import cross from "./cross.png";
 
 const Header = () => {
-  const [className, setClassName] = useState(styles.categoryMobileView);
+  const [isTrue, setIsTrue] = useState(false);
   const handleClassName = () => {
-    setClassName(styles.categoryTransform);
+    setIsTrue(!isTrue);
   };
   return (
     <>
-      <div className={className}>
+      <div
+        className={
+          isTrue ? styles.categoryTransform : styles.categoryMobileView
+        }
+      >
         <Link to="/all-products">
           <button className={styles.btn}>Best Sellers</button>
         </Link>
@@ -84,7 +90,7 @@ const Header = () => {
           </Link>
           <div className={styles.menuContainer}>
             <img
-              src="./icons/menu.png"
+              src={isTrue ? cross : menu}
               className={styles.menu}
               width="30"
               height="34"

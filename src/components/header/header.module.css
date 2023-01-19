@@ -27,6 +27,7 @@
   position: absolute;
   z-index: 1000;
   transform: translateY(-613%);
+  transition: transform 3s ease;
 }
 .categoryTransform {
   position: absolute;
