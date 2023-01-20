@@ -1,9 +1,10 @@
 import { ADD_TO_CART } from "./ActionType";
-import { GET_USER } from "./ActionType";
+import { GET_USER, GET_DATA } from "./ActionType";
 
 const initialState = {
   user: null,
   data: [],
+  wishlist: {},
 };
 export const Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -17,7 +18,11 @@ export const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         user: payload,
       };
-
+    case GET_DATA:
+      return {
+        ...state,
+        data: action.payload,
+      };
     default:
       return state;
   }

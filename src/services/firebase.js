@@ -1,62 +1,51 @@
-import { initializeApp } from "firebase/app";
 import { getUser } from "../components/Redux/Action";
-
-import { getFirestore } from "firebase/firestore";
+import "firebase/compat/firestore";
 import { store } from "../components/Redux/Store";
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
-import "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+// import data from "../components/data";
 
+// Firebase configuration (should be in .env)
 const firebaseConfig = {
-  apiKey: "AIzaSyC5FgPgj7GoSG0Uq6uEuJc9FemjWRxmYAk",
-  authDomain: "cultsport-3a7c0.firebaseapp.com",
-  projectId: "cultsport-3a7c0",
-  storageBucket: "cultsport-3a7c0.appspot.com",
-  messagingSenderId: "181038111542",
-  appId: "1:181038111542:web:42cdeda46439e699473197",
-  measurementId: "G-X6Z5FM3B6V",
+  apiKey: "AIzaSyAe5v6h2MssorsljBCPiZBD7-QLbEx41cQ",
+  authDomain: "learn-firebase-7610f.firebaseapp.com",
+  projectId: "learn-firebase-7610f",
+  storageBucket: "learn-firebase-7610f.appspot.com",
+  messagingSenderId: "509513614453",
+  appId: "1:509513614453:web:7237c61b5f62e7430c643c",
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-export const signInWithGoogle = () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      // console.log(result);
-      // const name = result.user.displayName;
-      // const email = result.user.email;
-      // const photo = result.user.photoURL;
-      store.dispatch(
-        getUser({
-          displayName: result.user.displayName,
-          email: result.user.email,
-          photo: result.user.photoURL,
-          id: result.user.uid,
-        })
-      );
-      // localStorage.setItem("name", name);
-      // localStorage.setItem("email", email);
-      // localStorage.setItem("photo", photo);
-      //console.log(name, email, photo);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+// Google Auth Provider
+const provider = new firebase.auth.GoogleAuthProvider();
+const auth = firebase.auth();
+
+export const signIn = async () => {
+  try {
+    const result = await auth.signInWithPopup(provider);
+    store.dispatch(
+      getUser({
+        displayName: result?.user?.displayName,
+        email: result?.user?.email,
+        id: result?.user?.uid,
+      })
+    );
+  } catch (error) {
+    store.dispatch(getUser(null));
+  }
 };
 
-export const signOutFunc = () => {
-  signOut(auth, provider)
-    .then((result) => {
-      store.dispatch(getUser(null));
-    })
-    .catch((error) => {
-      store.dispatch(getUser(null));
-    });
+export const signOut = async () => {
+  try {
+    await auth.signOut();
+    store.dispatch(getUser(null));
+  } catch (error) {
+    store.dispatch(getUser(null));
+  }
 };
+const database = firebase.firestore();
+export { auth, database };
+export default firebase;

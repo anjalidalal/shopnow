@@ -1,11 +1,24 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import Home from "./components/Home";
+import React, { useEffect } from "react";
 import Routers from "./components/Routers";
+import { database } from "./services/firebase";
+import data from "./components/data";
 
 const App = () => {
-  const data = useSelector((store) => store.data);
-  console.log(data);
+  useEffect(() => {
+    for (let i = 0; i < data.length; i++) {
+      database
+        .collection("products")
+        .add(data[i])
+        .then(function (docRef) {
+          console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function (error) {
+          console.log("Error adding document: ", error);
+        });
+    }
+    console.log(data.length);
+  }, []);
+
   return (
     <>
       <Routers />
