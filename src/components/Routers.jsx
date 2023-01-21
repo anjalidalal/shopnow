@@ -10,7 +10,7 @@ const Routers = () => {
     <>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        {/* <Route path="/all-products" element={<AllProducts />} /> */}
+        <Route path="/all-products" element={<AllProducts />} />
         <Route path="/profile" element={<Profile />} />
         {/* <Route path="/add-to-cart" element={<AddToCart />} />{" "} */}
       </Routes>

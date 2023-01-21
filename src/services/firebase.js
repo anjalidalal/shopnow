@@ -8,12 +8,13 @@ import "firebase/compat/firestore";
 
 // Firebase configuration (should be in .env)
 const firebaseConfig = {
-  apiKey: "AIzaSyAe5v6h2MssorsljBCPiZBD7-QLbEx41cQ",
-  authDomain: "learn-firebase-7610f.firebaseapp.com",
-  projectId: "learn-firebase-7610f",
-  storageBucket: "learn-firebase-7610f.appspot.com",
-  messagingSenderId: "509513614453",
-  appId: "1:509513614453:web:7237c61b5f62e7430c643c",
+  apiKey: "AIzaSyC5FgPgj7GoSG0Uq6uEuJc9FemjWRxmYAk",
+  authDomain: "cultsport-3a7c0.firebaseapp.com",
+  projectId: "cultsport-3a7c0",
+  storageBucket: "cultsport-3a7c0.appspot.com",
+  messagingSenderId: "181038111542",
+  appId: "1:181038111542:web:42cdeda46439e699473197",
+  measurementId: "G-X6Z5FM3B6V",
 };
 
 // Initialize Firebase

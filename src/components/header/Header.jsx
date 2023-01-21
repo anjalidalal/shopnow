@@ -54,20 +54,27 @@ const Header = () => {
           <Link to="/all-products">
             <button className={styles.btn}>Best Sellers</button>
           </Link>
-
-          <button className={styles.btn}>Just Launched</button>
-
-          <button className={styles.btn}>Men</button>
-
-          <button className={styles.btn}>Women</button>
-
-          <button className={styles.btn}>Cardio</button>
-
-          <button className={styles.btn}>Cycles</button>
-
-          <button className={styles.btn}>Supplements</button>
-
-          <button className={styles.btn}>Accessories</button>
+          <Link to="/all-products">
+            <button className={styles.btn}>Just Launched</button>
+          </Link>
+          <Link to="/all-products">
+            <button className={styles.btn}>Men</button>
+          </Link>
+          <Link to="/all-products">
+            <button className={styles.btn}>Women</button>
+          </Link>
+          <Link to="/all-products">
+            <button className={styles.btn}>Cardio</button>
+          </Link>
+          <Link to="/all-products">
+            <button className={styles.btn}>Cycles</button>
+          </Link>
+          <Link to="/all-products">
+            <button className={styles.btn}>Supplements</button>
+          </Link>
+          <Link to="/all-products">
+            <button className={styles.btn}>Accessories</button>
+          </Link>
         </div>
         <div className={styles.icons}>
           <Link to="/profile">
@@ -99,8 +106,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      <Carousel />
     </>
   );
 };

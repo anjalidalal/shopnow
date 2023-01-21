@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 
-let data = [
+let obj = [
   {
     image:
       "https://images.pexels.com/photos/38296/cycling-bicycle-riding-sport-38296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -297,7 +297,7 @@ let data = [
   },
   {
     image:
-      "https://cdnext.fynd.com/image/data/Superdry/27-jan-2021/317429_1.jpg?width=820&height=1000&mode=fill&fill=solid&fill-color=FFFFFF",
+      "https://cdnext.fynd.com/imaobj/Superdry/27-jan-2021/317429_1.jpg?width=820&height=1000&mode=fill&fill=solid&fill-color=FFFFFF",
     brand: " Roadster",
     id: nanoid(),
     content: "Textured Performance Tshirt with Logo",
@@ -458,4 +458,4 @@ let data = [
   },
 ];
 
-export default data;
+export default obj;

@@ -19,7 +19,7 @@ export const getUser = (data) => {
 
 const fetchData = () => async (dispatch) => {
   try {
-    const querySnapshot = (await database.collection("products").get()).docs;
+    const querySnapshot = (await database.collection("items").get()).docs;
 
     const data = querySnapshot.map((el) => {
       return {
