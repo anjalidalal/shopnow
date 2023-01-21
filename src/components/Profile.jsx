@@ -28,12 +28,14 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div className="profile" style={{ marginTop: "80px" }}>
+      <div className="profile" style={{ marginTop: "59px" }}>
         <div className="left">
-          <div>
-            <img src="" alt="" />
-            <h1>userName</h1>
-            <button>View Profile</button>
+          <div className="upper">
+            <div className="img"></div>
+            <div className="name">
+              <p> Name </p>
+              <span>View Profile</span>
+            </div>
           </div>
           <div>
             <div>
