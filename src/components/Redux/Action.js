@@ -17,7 +17,7 @@ export const getUser = (data) => {
   };
 };
 
-export const fetchData = () => async (dispatch) => {
+const fetchData = () => async (dispatch) => {
   try {
     const querySnapshot = (await database.collection("products").get()).docs;
 
@@ -34,9 +34,11 @@ export const fetchData = () => async (dispatch) => {
   }
 };
 
-export const getData = (data) => {
+const getData = (data) => {
   return {
     type: GET_DATA,
     payload: data,
   };
 };
+
+export { fetchData, getData };

@@ -9,7 +9,7 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div style={{ marginTop: "80px" }} className="signInContainer">
+      {/* <div style={{ marginTop: "80px" }} className="signInContainer">
         <button onClick={signIn} className="signin">
           Sign in with Google
         </button>
@@ -19,14 +19,13 @@ const Profile = () => {
           <div>
             <h2>{user.displayName}</h2>
             <p>{user.email}</p>
-            <img src={user.photo} className="profilePhoto" />
           </div>
         )}
 
         <button className="signin" onClick={signOut}>
-          Sign Out
-        </button>
-      </div>
+          Sign Out */}
+      {/* </button>
+      </div> */}
     </>
   );
 };
