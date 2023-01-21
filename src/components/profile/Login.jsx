@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import Header from "../header/Header";
+import manB from "./manB.png";
+import manP from "./manP.png";
+import womenB from "./womenB.png";
+import womenP from "./womenP.png";
 import { signIn, signOut } from "../../services/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { auth } from "../../services/firebase";
 import { fetchData, getUser } from "../Redux/Action";
 import Footer from "../footer/Footer";
 
-const Profile = () => {
+const Login = () => {
   const { user } = useSelector((state) => state);
+  const [isMale, setIsMale] = useState(false);
+  const [isFemale, setIsFemale] = useState(false);
+  const [gender, setGender] = useState("");
 
   const dispatch = useDispatch();
+
+  const handleMale = () => {
+    setIsMale(true);
+    setIsFemale(false);
+    setGender("Male");
+  };
+
+  const handleFemale = () => {
+    setIsMale(false);
+    setIsFemale(true);
+    setGender("Female");
+  };
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -32,7 +51,7 @@ const Profile = () => {
       <Header />
       {user ? (
         <>
-          <div className="afterLoggedIn" style={{ marginTop: "59px" }}>
+          <div className="afterLoggedIn" style={{ marginTop: "56px" }}>
             <div className="left">
               <div className="upper">
                 <img src={user.photoURL} className="img" alt="" />
@@ -104,10 +123,30 @@ const Profile = () => {
                 </label>
                 <label htmlFor="">
                   Gender
-                  <input type="text" name="" value="" className="input">
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                  </input>
+                  <div className="genderInput">
+                    <input
+                      type="text"
+                      name=""
+                      value={gender}
+                      className="input"
+                    />
+                    <div className="genderImg">
+                      <img
+                        src={isMale ? manP : manB}
+                        width="32px"
+                        height="32px"
+                        onClick={handleMale}
+                        alt=""
+                      />
+                      <img
+                        src={isFemale ? womenP : womenB}
+                        width="27px"
+                        height="27px"
+                        onClick={handleFemale}
+                        alt=""
+                      />
+                    </div>
+                  </div>
                 </label>
                 <label htmlFor="">
                   Email
@@ -170,4 +209,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Login;

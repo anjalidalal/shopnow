@@ -150,7 +150,6 @@ button {
 }
 .afterLoggedIn {
   width: 100%;
-  padding: 20px;
 }
 .beforeLoggedIn {
   height: 89vh;
@@ -193,6 +192,10 @@ button {
 }
 .left {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .upper {
   display: flex;
@@ -200,8 +203,7 @@ button {
   justify-content: center;
   gap: 10px;
   border-bottom: 1px solid rgb(245, 245, 245);
-  padding-bottom: 30px;
-  padding-top: 10px;
+  margin: 30px 0px 10px 0px;
 }
 .img {
   border-radius: 50%;
@@ -226,6 +228,7 @@ button {
 }
 .lower {
   padding: 20px 0px;
+  width: 100%;
 }
 .lower > div {
   padding: 15px;
@@ -255,16 +258,18 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   margin: 10px 0px;
 }
 label {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 220px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.902);
   margin-bottom: 15px;
   font-weight: 700;
+  border-bottom: 1px solid rgb(216, 216, 216);
   font-size: 13px;
 }
 .input {
@@ -272,17 +277,31 @@ label {
   border: none;
   font-size: 16px;
   background-color: transparent;
-  border-bottom: 1px solid rgb(216, 216, 216);
+}
+.genderInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.genderImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.genderImg > img {
+  object-fit: contain;
+  cursor: pointer;
 }
 .input:focus {
   outline: none !important;
 }
 .right {
-  padding: 10px 7px;
+  padding: 30px 7px 10px 7px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(243, 243, 243);
 }
 .right > h1 {
   font-size: 22px;
@@ -339,17 +358,31 @@ label {
     margin-bottom: 30px;
   }
   .afterLoggedIn {
+    padding: 0%;
     display: flex;
-    justify-content: space-between;
+  }
+  .left {
+    width: 30%;
   }
   .right {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    width: 70%;
+    padding: 10px 20px;
+  }
+  .right > h1 {
+    margin: 0;
+  }
+  .input {
+    height: 32px;
   }
   .form {
+    padding: 0px 10px;
+    margin-top: 10px;
     display: grid;
+    row-gap: 24px;
+    justify-content: space-between;
     grid-template-columns: auto auto;
   }
   .beforeLoggedIn {

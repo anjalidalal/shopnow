@@ -77,7 +77,7 @@ const Header = () => {
           </Link>
         </div>
         <div className={styles.icons}>
-          <Link to="/profile">
+          <Link to="/user-login">
             <img
               src="./icons/profile.png"
               alt=""
