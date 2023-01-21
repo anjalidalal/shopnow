@@ -148,6 +148,13 @@ button {
 .addToBag:active {
   background-color: #5e6064ee;
 }
+.profile {
+  padding: 20px;
+}
+.form {
+  display: grid;
+  grid-template-columns: auto;
+}
 .container {
   margin-top: 100px;
   display: grid;
@@ -206,5 +213,19 @@ button {
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 30px;
+  }
+  .profile {
+    display: flex;
+    justify-content: space-between;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }

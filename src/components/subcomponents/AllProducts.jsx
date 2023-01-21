@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import heart from "./heart.png";
 import pink from "./pink.png";
-import { fetchData, getUser } from "../Redux/Action";
-import { auth } from "../../services/firebase";
 
 const AllProducts = () => {
   const [whislist, setWishlist] = useState(false);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      dispatch(
-        getUser({
-          displayName: user.displayName,
-          email: user.email,
-          id: user.uid,
-        })
-      );
-    });
-    dispatch(fetchData());
-  }, []);
-
-  const { data, user } = useSelector((state) => state);
-  console.log(data);
+  const { data } = useSelector((state) => state);
 
   return (
     <>

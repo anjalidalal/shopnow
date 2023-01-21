@@ -1,24 +1,52 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import obj from "./data";
 import Carousel from "./carousel/Carousel";
+import Cart from "./subcomponents/Cart";
 
 const Home = () => {
-  const { data, user } = useSelector((state) => state);
+  const { data } = useSelector((state) => state);
+  const [cycles, setCycles] = useState([]);
+  const [tShirt, setTShirt] = useState([]);
+  const [bottomWear, setBottomWear] = useState([]);
+  const [topWear, setTopWear] = useState([]);
+  const [supplements, setSupplements] = useState([]);
+  const [accessories, setAccessories] = useState([]);
+
+  useEffect(() => {
+    const cycle = data.filter((el) => el.type === "Cycle");
+    setCycles(cycle);
+
+    const tshirt = data.filter((el) => el.type === "T-shirts");
+    setTShirt(tshirt);
+
+    const supplement = data.filter((el) => el.type === "Supplements");
+    setSupplements(supplement);
+
+    const accessorie = data.filter((el) => el.type === "Accessories");
+    setAccessories(accessorie);
+
+    const topwear = data.filter((el) => el.type === "Topwear");
+    setTopWear(topwear);
+
+    const bottomwear = data.filter((el) => el.type === "Bottomwear");
+    setBottomWear(bottomwear);
+  }, []);
+
+  console.log(cycles);
 
   return (
     <>
       <Header />
       <Carousel />
       <div className="article">
-        {/* <Cart obj={dataObj.tshirts} title={"T-shirts"} />
-        <Cart obj={dataObj.topwear} title={"Topwear"} />
-        <Cart obj={dataObj.bottomwear} title={"Bottom Wear"} />
-        <Cart obj={dataObj.cycles} title={"Cycle"} />
-        <Cart obj={dataObj.supplements} title={"Supplements"} />
-        <Cart obj={dataObj.accessories} title={"Accessories"} /> */}
+        <Cart obj={tShirt} title={"T-shirts"} />
+        <Cart obj={topWear} title={"Topwear"} />
+        <Cart obj={bottomWear} title={"Bottom Wear"} />
+        <Cart obj={cycles} title={"Cycle"} />
+        <Cart obj={supplements} title={"Supplements"} />
+        <Cart obj={accessories} title={"Accessories"} />
       </div>
       <Footer />
     </>
