@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import Home from "./Home";
-import AddToCart from "./AddToCart";
-import Profile from "./Profile";
+import AddToCart from "./profile/AddToCart";
+import Profile from "./profile/Profile";
 import AllProducts from "./subcomponents/AllProducts";
 
 const Routers = () => {

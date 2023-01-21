@@ -29,9 +29,11 @@ export const signIn = async () => {
     const result = await auth.signInWithPopup(provider);
     store.dispatch(
       getUser({
-        displayName: result?.user?.displayName,
-        email: result?.user?.email,
-        id: result?.user?.uid,
+        displayName: result.user.displayName,
+        email: result.user.email,
+        id: result.user.uid,
+        photo: result.user.photoURL,
+        phoneNumber: result.user.phoneNumber,
       })
     );
   } catch (error) {
