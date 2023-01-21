@@ -264,7 +264,7 @@ button {
 label {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 100%;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.902);
   margin-bottom: 15px;
@@ -382,8 +382,11 @@ label {
     margin-top: 10px;
     display: grid;
     row-gap: 24px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     grid-template-columns: auto auto;
+  }
+  label {
+    width: 220px;
   }
   .beforeLoggedIn {
     margin-top: 50px;
