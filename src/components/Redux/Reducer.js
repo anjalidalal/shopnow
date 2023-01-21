@@ -21,7 +21,7 @@ export const Reducer = (state = initialState, { type, payload }) => {
     case GET_DATA:
       return {
         ...state,
-        data: action.payload,
+        data: payload,
       };
     default:
       return state;

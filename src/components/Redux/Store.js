@@ -1,9 +1,18 @@
-import { createStore } from "redux";
+import {
+  legacy_createStore as createStore,
+  compose,
+  applyMiddleware,
+} from "redux";
+import thunk from "redux-thunk";
+
 import { Reducer } from "./Reducer";
 
-console.log("hello");
-
-export const store = createStore(
+const store = createStore(
   Reducer,
-  window.REDUX_DEVTOOLS_EXTENSION && window.REDUX_DEVTOOLS_EXTENSION()
+  compose(
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 );
+
+export default store;

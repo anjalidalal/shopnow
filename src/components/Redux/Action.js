@@ -27,7 +27,6 @@ const fetchData = () => async (dispatch) => {
         docId: el.id,
       };
     });
-    console.log("data", querySnapshot);
     dispatch(getData(data));
   } catch (err) {
     dispatch(getData([]));

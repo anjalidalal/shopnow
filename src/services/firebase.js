@@ -1,6 +1,6 @@
 import { getUser } from "../components/Redux/Action";
 import "firebase/compat/firestore";
-import { store } from "../components/Redux/Store";
+import store from "../components/Redux/Store";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";

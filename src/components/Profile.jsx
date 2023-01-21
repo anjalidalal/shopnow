@@ -4,8 +4,6 @@ import { signIn, signOut } from "../services/firebase";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
-  const user = useSelector((store) => store.user);
-  console.log(user);
   return (
     <>
       <Header />

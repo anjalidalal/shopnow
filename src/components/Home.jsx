@@ -50,7 +50,7 @@ const Home = () => {
 
         {data.map((el) => (
           <div key={el.id}>
-            {el.item}{" "}
+            {el.brand}
             {/* <button onClick={handleAddToWishlist(el.docId)}>Wishlist</button> */}
           </div>
         ))}
