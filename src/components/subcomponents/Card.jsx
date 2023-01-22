@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Cart = ({ obj, title }) => {
+const Card = ({ obj, title }) => {
   return (
     <>
       <p className="heading">
@@ -27,4 +27,4 @@ const Cart = ({ obj, title }) => {
   );
 };
 
-export default Cart;
+export default Card;

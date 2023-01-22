@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Carousel from "./carousel/Carousel";
-import Cart from "./subcomponents/Cart";
+import Card from "./subcomponents/Card";
 
 const Home = () => {
   const { data } = useSelector((state) => state);
@@ -40,12 +40,12 @@ const Home = () => {
       <Header />
       <Carousel />
       <div className="article">
-        <Cart obj={tShirt} title={"T-shirts"} />
-        <Cart obj={topWear} title={"Topwear"} />
-        <Cart obj={bottomWear} title={"Bottom Wear"} />
-        <Cart obj={cycles} title={"Cycle"} />
-        <Cart obj={supplements} title={"Supplements"} />
-        <Cart obj={accessories} title={"Accessories"} />
+        <Card obj={tShirt} title={"T-shirts"} />
+        <Card obj={topWear} title={"Topwear"} />
+        <Card obj={bottomWear} title={"Bottom Wear"} />
+        <Card obj={cycles} title={"Cycle"} />
+        <Card obj={supplements} title={"Supplements"} />
+        <Card obj={accessories} title={"Accessories"} />
       </div>
       <Footer />
     </>
