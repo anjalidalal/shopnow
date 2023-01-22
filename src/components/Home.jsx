@@ -7,6 +7,7 @@ import Cart from "./subcomponents/Cart";
 
 const Home = () => {
   const { data } = useSelector((state) => state);
+
   const [cycles, setCycles] = useState([]);
   const [tShirt, setTShirt] = useState([]);
   const [bottomWear, setBottomWear] = useState([]);
@@ -33,8 +34,6 @@ const Home = () => {
     const bottomwear = data.filter((el) => el.type === "Bottomwear");
     setBottomWear(bottomwear);
   }, []);
-
-  console.log(cycles);
 
   return (
     <>

@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import Header from "../header/Header";
 import manB from "./manB.png";
 import manP from "./manP.png";
 import womenB from "./womenB.png";
 import womenP from "./womenP.png";
 import { signIn, signOut } from "../../services/firebase";
-import { useDispatch, useSelector } from "react-redux";
-import { auth } from "../../services/firebase";
-import { fetchData, getUser } from "../Redux/Action";
+import { useSelector } from "react-redux";
 import Footer from "../footer/Footer";
 
 const Login = () => {
@@ -16,8 +13,6 @@ const Login = () => {
   const [isMale, setIsMale] = useState(false);
   const [isFemale, setIsFemale] = useState(false);
   const [gender, setGender] = useState("");
-
-  const dispatch = useDispatch();
 
   const handleMale = () => {
     setIsMale(true);
@@ -30,21 +25,6 @@ const Login = () => {
     setIsFemale(true);
     setGender("Female");
   };
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      dispatch(
-        getUser({
-          displayName: user.displayName,
-          email: user.email,
-          id: user.uid,
-          photo: user.photoURL,
-          phoneNumber: user.phoneNumber,
-        })
-      );
-    });
-    dispatch(fetchData());
-  }, []);
 
   return (
     <>
