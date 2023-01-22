@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "./ActionType";
+// import { ADD_TO_CART } from "./ActionType";
 import { GET_USER, GET_DATA } from "./ActionType";
 
 const initialState = {
@@ -8,11 +8,11 @@ const initialState = {
 };
 export const Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ADD_TO_CART:
-      return {
-        ...state,
-        data: [...state.data, payload],
-      };
+    // case ADD_TO_CART:
+    //   return {
+    //     ...state,
+    //     data: [...state.data, payload],
+    //   };
     case GET_USER:
       return {
         ...state,

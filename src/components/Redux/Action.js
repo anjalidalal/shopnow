@@ -1,14 +1,14 @@
-import { ADD_TO_CART } from "./ActionType";
+// import { ADD_TO_CART } from "./ActionType";
 import { GET_USER, GET_DATA } from "./ActionType";
 import firebase from "../../services/firebase";
 import { database } from "../../services/firebase";
 
-export const addToCart = (data) => {
-  return {
-    type: ADD_TO_CART,
-    payload: data,
-  };
-};
+// export const addToCart = (data) => {
+//   return {
+//     type: ADD_TO_CART,
+//     payload: data,
+//   };
+// };
 
 export const getUser = (data) => {
   return {
