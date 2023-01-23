@@ -36,6 +36,18 @@ export const signIn = async () => {
         phoneNumber: result.user.phoneNumber,
       })
     );
+
+    // if (result.additionalUserInfo.isNewUser) {
+    //   await database.collection("wishlists").doc(result?.user?.uid).set({
+    //     productIds: [],
+    //   });
+    // }
+
+    if (result.additionalUserInfo.isNewUser) {
+      await database.collection("wishlist").doc(result.user.uid).set({
+        productsIds: [],
+      });
+    }
   } catch (error) {
     store.dispatch(getUser(null));
   }

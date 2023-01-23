@@ -8,7 +8,7 @@ import pink from "./pink.png";
 const AllProducts = () => {
   const [whislist, setWishlist] = useState(false);
 
-  const { data } = useSelector((state) => state);
+  const { user, data } = useSelector((state) => state);
 
   return (
     <>
