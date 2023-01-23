@@ -42,9 +42,11 @@ const getData = (data) => {
 
 const fetchWishlist = (userId) => async (dispatch) => {
   try {
-    const wishlist = await (
-      await database.collection("wishlist").doc(userId).get()
-    ).data();
+    const wishlist = await database
+      .collection("wishlist")
+      .doc(userId)
+      .get()
+      .data();
     dispatch(getWishlist(wishlist || {}));
   } catch (error) {
     dispatch(getWishlist([]));

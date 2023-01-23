@@ -5,6 +5,7 @@ const initialState = {
   data: [],
   wishlist: {},
 };
+console.log(initialState.wishlist);
 export const Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case GET_USER:

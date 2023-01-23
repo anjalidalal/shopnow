@@ -1,14 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
+import { useEffect } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import heart from "./heart.png";
-import pink from "./pink.png";
+//import pink from "./pink.png";
+import {
+  addToWishlist,
+  getUser,
+  fetchData,
+  fetchWishlist,
+} from "../Redux/Action";
+import { auth } from "../../services/firebase";
 
 const AllProducts = () => {
-  const [whislist, setWishlist] = useState(false);
+  // const [whislist, setWishlist] = useState(false);
+  const dispatch = useDispatch();
 
   const { user, data } = useSelector((state) => state);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      dispatch(
+        getUser({
+          displayName: user.displayName,
+          email: user.email,
+          id: user.uid,
+        })
+      );
+      dispatch(fetchWishlist(user?.uid));
+    });
+
+    dispatch(fetchData());
+  }, []);
+
+  const handleAddToWishlist = (id) => () => {
+    dispatch(addToWishlist(user?.id, id));
+  };
 
   return (
     <>
@@ -46,17 +74,9 @@ const AllProducts = () => {
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
-              <button
-                className={whislist ? "whislisted" : "whislist"}
-                onClick={() => setWishlist(!whislist)}
-              >
-                <img
-                  src={whislist ? pink : heart}
-                  width="20px"
-                  height="20px"
-                  alt=""
-                />
-                {whislist ? "Whislisted" : "Whislist"}
+              <button className="whislist" onClick={handleAddToWishlist(el.id)}>
+                <img src={heart} width="20px" height="20px" alt="" />
+                Whislist
               </button>
             </div>
           </div>
