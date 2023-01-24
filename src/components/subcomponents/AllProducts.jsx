@@ -28,14 +28,15 @@ const AllProducts = () => {
           id: user.uid,
         })
       );
-      dispatch(fetchWishlist(user?.uid));
+      dispatch(fetchWishlist(user.uid));
     });
 
     dispatch(fetchData());
   }, []);
 
   const handleAddToWishlist = (id) => () => {
-    dispatch(addToWishlist(user?.id, id));
+    console.log(id, "hello");
+    dispatch(addToWishlist(user.id, id));
   };
 
   return (
