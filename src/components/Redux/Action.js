@@ -40,13 +40,11 @@ const getData = (data) => {
   };
 };
 
-const fetchWishlist = (userId) => async (dispatch) => {
+const fetchWishlist = (id) => async (dispatch) => {
   try {
-    const wishlist = await database
-      .collection("wishlist")
-      .doc(userId)
-      .get()
-      .data();
+    const wishlist = (
+      await database.collection("wishlist").doc(id).get()
+    ).data();
     dispatch(getWishlist(wishlist || {}));
   } catch (error) {
     dispatch(getWishlist([]));
@@ -60,18 +58,13 @@ const getWishlist = (data) => {
   };
 };
 
-const addToWishlist = (wishlistDocId, newProductId) => async (dispatch) => {
+const addToWishlist = (wishlistDocId) => async (dispatch) => {
   try {
-    await database
-      .collection("wishlist")
-      .doc(wishlistDocId)
-      .update({
-        productIds: firebase.firestore.FieldValue.arrayUnion(newProductId),
-      });
+    await database.collection("wishlist").doc(wishlistDocId).update();
     dispatch(fetchWishlist(wishlistDocId));
   } catch (error) {
     dispatch(fetchWishlist(wishlistDocId));
   }
 };
 
-export { fetchData, getData, fetchWishlist, addToWishlist };
+export { fetchData, getData, fetchWishlist, addToWishlist, getWishlist };

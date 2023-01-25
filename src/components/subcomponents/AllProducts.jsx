@@ -5,12 +5,7 @@ import Footer from "../footer/Footer";
 import { useSelector, useDispatch } from "react-redux";
 import heart from "./heart.png";
 //import pink from "./pink.png";
-import {
-  addToWishlist,
-  getUser,
-  fetchData,
-  fetchWishlist,
-} from "../Redux/Action";
+import { addToWishlist, getUser, fetchData } from "../Redux/Action";
 import { auth } from "../../services/firebase";
 
 const AllProducts = () => {
@@ -28,7 +23,6 @@ const AllProducts = () => {
           id: user.uid,
         })
       );
-      dispatch(fetchWishlist(user.uid));
     });
 
     dispatch(fetchData());
@@ -36,7 +30,7 @@ const AllProducts = () => {
 
   const handleAddToWishlist = (id) => () => {
     console.log(id, "hello");
-    dispatch(addToWishlist(user.id, id));
+    dispatch(addToWishlist(id));
   };
 
   return (
@@ -75,7 +69,13 @@ const AllProducts = () => {
                 <img src="./icons/bag.png" alt="" width="18px" height="18px" />
                 Add to cart
               </button>
-              <button className="whislist" onClick={handleAddToWishlist(el.id)}>
+              <button
+                className="whislist"
+                onClick={() => {
+                  console.log(el.docId);
+                  handleAddToWishlist(el.docId);
+                }}
+              >
                 <img src={heart} width="20px" height="20px" alt="" />
                 Whislist
               </button>
