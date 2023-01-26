@@ -1,4 +1,4 @@
-import { GET_USER, GET_DATA, GET_WISHLIST } from "./ActionType";
+import { GET_USER, GET_DATA } from "./ActionType";
 
 const initialState = {
   user: null,
@@ -18,11 +18,11 @@ export const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         data: payload,
       };
-    case GET_WISHLIST:
-      return {
-        ...state,
-        wishlist: payload,
-      };
+    // case GET_WISHLIST:
+    //   return {
+    //     ...state,
+    //     wishlist: payload,
+    //   };
     default:
       return state;
   }
