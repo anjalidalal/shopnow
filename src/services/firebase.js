@@ -38,7 +38,7 @@ export const signIn = async () => {
     );
 
     // if (result.additionalUserInfo.isNewUser) {
-    //   await database.collection("wishlist").doc(result.user.uid).set({
+    //   await database.collection("wishlists").doc(result.user.uid).set({
     //     productsIds: [],
     //   });
     // }

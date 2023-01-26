@@ -1,4 +1,4 @@
-import { GET_USER, GET_DATA } from "./ActionType";
+import { GET_USER, GET_DATA, GET_WISHLIST } from "./ActionType";
 
 const initialState = {
   user: null,

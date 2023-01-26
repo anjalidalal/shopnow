@@ -1,4 +1,4 @@
-import { GET_USER, GET_DATA } from "./ActionType";
+import { GET_USER, GET_DATA, GET_WISHLIST } from "./ActionType";
 import firebase from "../../services/firebase";
 import { database } from "../../services/firebase";
 
@@ -31,5 +31,40 @@ const getData = (data) => {
     payload: data,
   };
 };
+
+// const fetchWishlist = (userId) => async (dispatch) => {
+//   try {
+//     const wishlist = (
+//       await database.collection("wishlists").doc(userId).get()
+//     ).data();
+
+//     dispatch(getWishlist(wishlist || {}));
+//   } catch (error) {
+//     console.log(error);
+//     dispatch(getWishlist([]));
+//   }
+// };
+
+// const getWishlist = (data) => {
+//   return {
+//     type: GET_WISHLIST,
+//     payload: data,
+//   };
+// };
+
+// const addToWishlist = (wishlistDocId, newProductId) => async (dispatch) => {
+//   try {
+//     database
+//       .collection("wishlists")
+//       .doc(wishlistDocId)
+//       .update({
+//         productsId: firebase.firestore.FieldValue.arrayUnion(newProductId),
+//       });
+//     dispatch(fetchWishlist(wishlistDocId));
+//   } catch (error) {
+//     console.log(error);
+//     dispatch(fetchWishlist(wishlistDocId));
+//   }
+// };
 
 export { fetchData, getData };
