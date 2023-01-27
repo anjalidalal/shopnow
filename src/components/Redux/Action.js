@@ -58,7 +58,7 @@ const getData = (data) => {
 //       .collection("wishlists")
 //       .doc(wishlistDocId)
 //       .update({
-//         productsId: firebase.firestore.FieldValue.arrayUnion(newProductId),
+//         productsIds: firebase.firestore.FieldValue.arrayUnion(newProductId),
 //       });
 //     dispatch(fetchWishlist(wishlistDocId));
 //   } catch (error) {
