@@ -8,8 +8,8 @@ import heart from "./heart.png";
 import {
   getUser,
   fetchData,
-  // addToWishlist,
-  // fetchWishlist,
+  addToWishlist,
+  fetchWishlist,
 } from "../Redux/Action";
 import { auth, database } from "../../services/firebase";
 
@@ -28,15 +28,15 @@ const AllProducts = () => {
           id: user.uid,
         })
       );
-      //dispatch(fetchWishlist(user.uid));
+      dispatch(fetchWishlist(user?.uid));
     });
 
     dispatch(fetchData());
   }, []);
 
-  // const handleAddToWishlist = (docId) => {
-  //   dispatch(addToWishlist(user?.id, docId));
-  // };
+  const handleAddToWishlist = (docId) => {
+    dispatch(addToWishlist(user?.id, docId));
+  };
 
   return (
     <>
@@ -78,7 +78,7 @@ const AllProducts = () => {
                 className="whislist"
                 onClick={() => {
                   console.log(el.docId);
-                  //handleAddToWishlist(el.docId);
+                  handleAddToWishlist(el.docId);
                 }}
               >
                 <img src={heart} width="20px" height="20px" alt="" />

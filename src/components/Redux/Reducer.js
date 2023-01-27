@@ -18,11 +18,11 @@ export const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         data: payload,
       };
-    // case GET_WISHLIST:
-    //   return {
-    //     ...state,
-    //     wishlist: payload,
-    //   };
+    case GET_WISHLIST:
+      return {
+        ...state,
+        wishlist: payload,
+      };
     default:
       return state;
   }
