@@ -77,7 +77,6 @@ const AllProducts = () => {
               <button
                 className="whislist"
                 onClick={() => {
-                  console.log(el.docId);
                   handleAddToWishlist(el.docId);
                 }}
               >

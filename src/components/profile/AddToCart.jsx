@@ -1,25 +1,41 @@
 import React from "react";
 import Header from "../header/Header";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const AddToCart = () => {
-  // const data = useSelector((store) => store.data);
+  const { user, data, wishlist } = useSelector((state) => state);
+  const [filteredData, setFilteredData] = useState([]);
+  //console.log(wishlist);
+
+  useEffect(() => {
+    const wishlistsProducts = data.filter((el) => {
+      el.docId === wishlist.productsIds;
+    });
+    setFilteredData(wishlistsProducts);
+  }, []);
+
+  console.log(data.docId);
 
   return (
     <>
       <Header />
       <div className="container">
-        {/* {data.map((el) => (
-          <div className="cart" key={el.id}>
-            <img src={el.image} alt="" />
-            <span className="brand">{el.brand}</span>
-            <p className="content">{el.content}</p>
-            <p className="price">
-              {el.price} <span className="off">{el.off}</span>{" "}
-              <span className="discount">{el.discount}</span>
-            </p> */}
-        {/* </div>
-        ))} */}
+        {wishlist.productsIds !== [] ? (
+          <div>
+            {wishlist.productsIds.map((productId) => (
+              <>
+                <h1>{productId}</h1>
+                {data.map((el) => (
+                  {}
+                ))}
+              </>
+            ))}
+          </div>
+        ) : (
+          <p>There are no items in whislist</p>
+        )}
       </div>
     </>
   );
