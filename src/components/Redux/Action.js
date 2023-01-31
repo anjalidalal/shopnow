@@ -1,4 +1,4 @@
-import { GET_USER, GET_DATA, GET_WISHLIST } from "./ActionType";
+import { GET_USER, GET_DATA, GET_WISHLIST, GET_CART } from "./ActionType";
 import firebase from "../../services/firebase";
 import { database } from "../../services/firebase";
 
@@ -67,4 +67,29 @@ const addToWishlist = (wishlistDocId, newProductId) => async (dispatch) => {
   }
 };
 
-export { fetchData, getData, addToWishlist, fetchWishlist, getWishlist };
+const fetchCartData = (docId) => async (dispatch) => {
+  try {
+    const cart = (await database.collection("items").doc(docId).get()).data();
+
+    dispatch(getCartData(cart || {}));
+  } catch (error) {
+    dispatch(getCartData([]));
+  }
+};
+
+const getCartData = (data) => {
+  return {
+    type: GET_CART,
+    payload: data,
+  };
+};
+
+export {
+  fetchData,
+  getData,
+  addToWishlist,
+  fetchWishlist,
+  getWishlist,
+  fetchCartData,
+  getCartData,
+};
