@@ -245,13 +245,42 @@ button {
   font-size: 16px;
 }
 .container {
-  margin-top: 100px;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: auto;
+  margin-top: 20px;
+  padding: 10px 0px;
   margin-bottom: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.548);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.548);
 }
-
+.cartBtn {
+  margin-top: 80px;
+  font-size: 21px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.closeBtn {
+  margin: 5px 0px;
+}
+.plusMinusBtn {
+  padding: 10px;
+  border: 2px solid #ff316d;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+  width: 180px;
+  margin-bottom: 10px;
+}
+.plusMinusBtn > button {
+  font-size: 25px;
+  font-weight: 500;
+  color: #ff316d;
+  cursor: pointer;
+}
 .form {
   width: 100%;
   display: flex;

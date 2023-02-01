@@ -1,55 +1,56 @@
 import React from "react";
 import Header from "../header/Header";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
-import { fetchCartData } from "../Redux/Action";
+import { Link } from "react-router-dom";
 
 const AddToCart = () => {
-  const { user, data, wishlist, cart } = useSelector((state) => state);
+  const { data, wishlist } = useSelector((state) => state);
   const [filteredData, setFilteredData] = useState([]);
-  console.log(cart);
-
-  const dispatch = useDispatch();
 
   useEffect(() => {
     wishlist.productsIds !== []
       ? wishlist.productsIds.map((productId) => {
-          dispatch(fetchCartData(productId));
+          handleAddToCart(productId);
         })
       : "";
   }, []);
-
-  // console.log(data.docId);
-
-  // const handleAddToCart = (docId) => {
-  //   dispatch(fetchCartData(docId));
-  // };
+  const handleAddToCart = (docId) => {
+    const wishlists = data.filter((el) => el.docId === docId);
+    setFilteredData(wishlists);
+  };
+  console.log(filteredData);
 
   return (
     <>
       <Header />
+      <Link to="/all-products">
+        <button className="cartBtn">
+          <img src="./icons/back.png" width="20px" height="20px" alt="" /> Your
+          Cart{" "}
+        </button>
+      </Link>
       <div className="container">
-        {/* {wishlist.productsIds !== [] ? (
-          <div>
-            {wishlist.productsIds.map((productId) => (
-              <>
-                <h1>{productId}</h1>
-              </>
-            ))}
-          </div>
-        ) : (
-          <p>There are no items in whislist</p>
-        )} */}
-        {cart.map((el) => (
-          <div className="cart" key={el.id}>
-            <img src={el.image} alt="something" />
-            <span className="brand">{el.brand}</span>
-            <p className="content">{el.content}</p>
-            <p className="price">
-              {el.price} <span className="off">{el.off}</span>{" "}
-              <span className="discount">{el.discount}</span>
-            </p>
+        {filteredData.map((el) => (
+          <div key={el.id} className="cartBox">
+            <button className="closeBtn">
+              <img src="./icons/close.png" width="24px" height="24px" alt="" />
+            </button>
+            <div className="cart" key={el.id}>
+              <img src={el.image} alt="something" />
+              <span className="brand">{el.brand}</span>
+              <p className="content">{el.content}</p>
+              <p className="price">
+                {el.price} <span className="off">{el.off}</span>{" "}
+                <span className="discount">{el.discount}</span>
+              </p>
+            </div>
+            <div className="plusMinusBtn">
+              <button>+</button>
+              content
+              <button>-</button>
+            </div>
           </div>
         ))}
       </div>

@@ -67,29 +67,21 @@ const addToWishlist = (wishlistDocId, newProductId) => async (dispatch) => {
   }
 };
 
-const fetchCartData = (docId) => async (dispatch) => {
-  try {
-    const cart = (await database.collection("items").doc(docId).get()).data();
+// const fetchCartData = (docId) => async (dispatch) => {
+//   try {
+//     const cart = (await database.collection("items").doc(docId).get()).data();
 
-    dispatch(getCartData(cart || {}));
-  } catch (error) {
-    dispatch(getCartData([]));
-  }
-};
+//     dispatch(getCartData(cart || {}));
+//   } catch (error) {
+//     dispatch(getCartData([]));
+//   }
+// };
 
-const getCartData = (data) => {
-  return {
-    type: GET_CART,
-    payload: data,
-  };
-};
+// const getCartData = (data) => {
+//   return {
+//     type: GET_CART,
+//     payload: data,
+//   };
+// };
 
-export {
-  fetchData,
-  getData,
-  addToWishlist,
-  fetchWishlist,
-  getWishlist,
-  fetchCartData,
-  getCartData,
-};
+export { fetchData, getData, addToWishlist, fetchWishlist, getWishlist };

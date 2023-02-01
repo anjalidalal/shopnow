@@ -34,7 +34,7 @@ const Login = () => {
           <div className="afterLoggedIn" style={{ marginTop: "56px" }}>
             <div className="left">
               <div className="upper">
-                <img src={user.photoURL} className="img" alt="" />
+                <img src={user.photo} className="img" alt="" />
                 <div className="name">
                   <p> {user.displayName} </p>
                   <span>View Profile</span>
@@ -89,7 +89,7 @@ const Login = () => {
               </div>
             </div>
             <div className="right">
-              <img src={user.photoURL} className="img" alt="" />
+              <img src={user.photo} className="img" alt="" />
               <h1>Pofile</h1>
               <div className="form">
                 <label htmlFor="">

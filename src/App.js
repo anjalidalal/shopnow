@@ -14,6 +14,8 @@ const App = () => {
           displayName: user.displayName,
           email: user.email,
           id: user.uid,
+          photo: user.photoURL,
+          phoneNumber: user.phoneNumber,
         })
       );
       dispatch(fetchWishlist(user?.uid));
