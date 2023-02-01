@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const AddToCart = () => {
   const { data, wishlist } = useSelector((state) => state);
   const [filteredData, setFilteredData] = useState([]);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     wishlist.productsIds !== []
@@ -47,13 +48,14 @@ const AddToCart = () => {
               </p>
             </div>
             <div className="plusMinusBtn">
-              <button>+</button>
-              content
-              <button>-</button>
+              <button onClick={() => setCounter(counter - 1)}>-</button>
+              {counter}
+              <button onClick={() => setCounter(counter + 1)}>+</button>
             </div>
           </div>
         ))}
       </div>
+      <button className="buyNowBtn">Buy Now</button>
     </>
   );
 };

@@ -264,7 +264,7 @@ button {
   margin: 5px 0px;
 }
 .plusMinusBtn {
-  padding: 10px;
+  padding: 8px;
   border: 2px solid #ff316d;
   border-radius: 18px;
   display: flex;
@@ -272,7 +272,7 @@ button {
   justify-content: center;
   gap: 20px;
   font-size: 18px;
-  width: 180px;
+  width: 160px;
   margin-bottom: 10px;
 }
 .plusMinusBtn > button {
@@ -280,6 +280,17 @@ button {
   font-weight: 500;
   color: #ff316d;
   cursor: pointer;
+}
+.buyNowBtn {
+  align-items: center;
+  background: rgb(255, 50, 120);
+  font-size: 20px;
+  width: 70%;
+  border-radius: 5px;
+  padding: 9px 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
 }
 .form {
   width: 100%;
