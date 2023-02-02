@@ -86,7 +86,7 @@ const Header = () => {
               className={styles.profile}
             />
           </Link>
-          <Link to="/add-to-cart">
+          <Link to="/cart">
             <img
               src="./icons/cart.png"
               alt=""

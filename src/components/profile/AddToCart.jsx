@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const AddToCart = () => {
   const { data, wishlist } = useSelector((state) => state);
   const [filteredData, setFilteredData] = useState([]);
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
   useEffect(() => {
     wishlist.productsIds !== []
@@ -55,7 +55,9 @@ const AddToCart = () => {
           </div>
         ))}
       </div>
-      <button className="buyNowBtn">Buy Now</button>
+      <Link to="/orders">
+        <button className="buyNowBtn">Buy Now</button>
+      </Link>
     </>
   );
 };

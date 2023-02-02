@@ -230,13 +230,13 @@ button {
   padding: 20px 0px;
   width: 100%;
 }
-.lower > div {
+.list {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.lower > div > button {
+.list > button {
   background: white;
   color: rgb(0, 0, 0);
   border-top-left-radius: 0px;
@@ -285,9 +285,9 @@ button {
   align-items: center;
   background: rgb(255, 50, 120);
   font-size: 20px;
-  width: 70%;
+  width: 190px;
   border-radius: 5px;
-  padding: 9px 15px;
+  padding: 10px 15px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 30px;

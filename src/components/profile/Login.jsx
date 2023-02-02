@@ -7,6 +7,7 @@ import womenP from "./womenP.png";
 import { signIn, signOut } from "../../services/firebase";
 import { useSelector } from "react-redux";
 import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const { user } = useSelector((state) => state);
@@ -41,16 +42,18 @@ const Login = () => {
                 </div>
               </div>
               <div className="lower">
-                <div>
-                  <button>Orders</button>
-                  <img
-                    src="./icons/cart.png"
-                    width="25px"
-                    height="25px"
-                    alt=""
-                  />
-                </div>
-                <div>
+                <Link to="/cart">
+                  <div className="list">
+                    <button>Orders</button>
+                    <img
+                      src="./icons/cart.png"
+                      width="25px"
+                      height="25px"
+                      alt=""
+                    />
+                  </div>
+                </Link>
+                <div className="list">
                   <button>Redeem Voucher</button>
                   <img
                     src="./icons/voucher.png"
@@ -59,7 +62,7 @@ const Login = () => {
                     alt=""
                   />
                 </div>
-                <div>
+                <div className="list">
                   <button>Account</button>
                   <img
                     src="./icons/settings.png"
@@ -68,7 +71,7 @@ const Login = () => {
                     alt=""
                   />
                 </div>
-                <div>
+                <div className="list">
                   <button>Support</button>
                   <img
                     src="./icons/support.png"
@@ -77,7 +80,7 @@ const Login = () => {
                     alt=""
                   />
                 </div>
-                <div onClick={signOut}>
+                <div onClick={signOut} className="list">
                   <button>Log Out</button>
                   <img
                     src="./icons/logout.png"
