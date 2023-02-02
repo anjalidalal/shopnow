@@ -42,11 +42,13 @@ button {
   height: 315px;
   object-fit: cover;
 }
+.productDetail {
+  padding: 10px;
+}
 .brand {
   color: rgb(0 0 0 / 60%);
   font-size: 15px;
   font-weight: 400;
-  margin-top: 10px;
 }
 .content {
   font-size: 17px;
@@ -394,7 +396,7 @@ label {
   .allProducts,
   .container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     margin-bottom: 30px;
   }
   .afterLoggedIn {
@@ -431,5 +433,13 @@ label {
   .beforeLoggedIn {
     margin-top: 50px;
     height: 90vh;
+  }
+}
+@media (min-width: 992px) {
+  .allProducts,
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
   }
 }

@@ -1,18 +1,22 @@
-.addressForm {
+.addressForm,
+.priceDetails {
   border: 1px solid rgba(128, 128, 128, 0.498);
   padding: 10px 10px 20px 10px;
   margin: 10px;
 }
-.ordersDiv {
-  margin-top: 80px;
+.priceDetails {
+  height: 240px;
 }
-p {
+.ordersDiv {
+  margin-top: 60px;
+}
+.label {
   padding: 12px 0px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #282c3f;
 }
-input {
+.input {
   width: 100%;
   font-size: 14px;
   padding: 12px;
@@ -56,4 +60,32 @@ input {
   align-items: center;
   border-radius: 4px !important;
   padding: 14px !important;
+}
+.amountCalculation,
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.amountCalculation > p {
+  margin-top: 6px;
+  color: #19191ab9;
+}
+.totalAmount {
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 15px 0px;
+  border-top: 1px solid rgba(128, 128, 128, 0.479);
+}
+
+@media (min-width: 768px) {
+  .addressForm > div,
+  .priceDetails {
+    width: 350px;
+  }
+  .ordersDiv {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+  }
 }
