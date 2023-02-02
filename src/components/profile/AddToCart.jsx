@@ -40,12 +40,14 @@ const AddToCart = () => {
             </button>
             <div className="cart" key={el.id}>
               <img src={el.image} alt="something" />
-              <span className="brand">{el.brand}</span>
-              <p className="content">{el.content}</p>
-              <p className="price">
-                {el.price} <span className="off">{el.off}</span>{" "}
-                <span className="discount">{el.discount}</span>
-              </p>
+              <div className="productDetail">
+                <span className="brand">{el.brand}</span>
+                <p className="content">{el.content}</p>
+                <p className="price">
+                  {el.price} <span className="off">{el.off}</span>{" "}
+                  <span className="discount">{el.discount}</span>
+                </p>
+              </div>
             </div>
             <div className="plusMinusBtn">
               <button onClick={() => setCounter(counter - 1)}>-</button>

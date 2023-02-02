@@ -7,25 +7,28 @@
 .priceDetails {
   height: 240px;
 }
-.ordersDiv {
+.mainContainer {
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .label {
-  padding: 12px 0px;
-  font-size: 16px;
+  padding: 9px 0px;
+  font-size: 14px;
   font-weight: 700;
   color: #282c3f;
 }
 .input {
   width: 100%;
   font-size: 14px;
-  padding: 12px;
+  padding: 9px;
   border: 1px solid #d4d5d9;
   background-color: transparent;
   font-weight: 300;
   border-radius: 4px;
   line-height: 14px;
-  margin: 10px 0px;
+  margin: 9px 0px;
 }
 .bttn {
   display: flex;
@@ -48,7 +51,7 @@
   font-weight: 700;
 }
 .saveAddress {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .addAddress {
   background-color: #ff3f6c;
@@ -59,7 +62,7 @@
   margin: auto;
   align-items: center;
   border-radius: 4px !important;
-  padding: 14px !important;
+  padding: 12px;
 }
 .amountCalculation,
 .totalAmount {
@@ -77,14 +80,27 @@
   padding: 15px 0px;
   border-top: 1px solid rgba(128, 128, 128, 0.479);
 }
-
+.city {
+  display: flex;
+  grid-area: 10px;
+  justify-content: space-between;
+}
+.city > input {
+  width: 180px;
+}
 @media (min-width: 768px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+  }
   .addressForm > div,
   .priceDetails {
-    width: 350px;
+    width: 370px;
   }
   .ordersDiv {
     width: 90vw;
+    margin-top: 30px;
+    height: 565px;
     display: flex;
     justify-content: space-around;
   }

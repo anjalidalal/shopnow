@@ -83,7 +83,7 @@ const AllProducts = () => {
                   Add to cart
                 </button>
                 <button
-                  className="whislist"
+                  className="wishlist"
                   onClick={() => {
                     handleAddToWishlist(el.docId);
                   }}
