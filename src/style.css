@@ -435,11 +435,11 @@ label {
     height: 90vh;
   }
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .allProducts,
   .container {
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 30px;
   }
-}
+} */

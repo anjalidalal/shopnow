@@ -64,9 +64,6 @@ const Header = () => {
             <button className={styles.btn}>Women</button>
           </Link>
           <Link to="/all-products">
-            <button className={styles.btn}>Cardio</button>
-          </Link>
-          <Link to="/all-products">
             <button className={styles.btn}>Cycles</button>
           </Link>
           <Link to="/all-products">
