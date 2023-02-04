@@ -24,11 +24,11 @@ export const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         wishlist: payload,
       };
-    case GET_CART:
-      return {
-        ...state,
-        data: payload,
-      };
+    // case GET_CART:
+    //   return {
+    //     ...state,
+    //     data: payload,
+    //   };
     default:
       return state;
   }
