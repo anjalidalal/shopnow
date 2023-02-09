@@ -10,9 +10,9 @@ const Card = ({ obj, title }) => {
           <span className="view-all">view all</span>
         </Link>
       </p>
-      <div className="cycle">
+      <div className="productsContainer">
         {obj.map((el) => (
-          <div className="cart" key={el.id}>
+          <div className="card" key={el.id}>
             <img src={el.image} alt="" />
             <div className="productDetail">
               <span className="brand">{el.brand}</span>

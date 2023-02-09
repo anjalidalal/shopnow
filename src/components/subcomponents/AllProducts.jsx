@@ -63,7 +63,7 @@ const AllProducts = () => {
       </div>
       <div className="allProducts">
         {data.map((el) => (
-          <div className="cart" key={el.id}>
+          <div className="card" key={el.id}>
             <img src={el.image} alt="something" />
             <div className="productDetail">
               <span className="brand">{el.brand}</span>
@@ -71,27 +71,22 @@ const AllProducts = () => {
               <p className="price">
                 {el.price} <span className="off">{el.off}</span>{" "}
                 <span className="discount">{el.discount}</span>
-              </p>
-              <div className="buttons">
-                <button className="addToBag">
-                  <img
-                    src="./icons/bag.png"
-                    alt=""
-                    width="18px"
-                    height="18px"
-                  />
-                  Add to cart
-                </button>
-                <button
-                  className="wishlist"
-                  onClick={() => {
-                    handleAddToWishlist(el.docId);
-                  }}
-                >
-                  <img src={heart} width="20px" height="20px" alt="" />
-                  Whislist
-                </button>
-              </div>
+              </p>{" "}
+            </div>
+            <div className="buttons">
+              <button className="addToBag">
+                <img src="./icons/bag.png" alt="" width="18px" height="18px" />
+                Add to cart
+              </button>
+              <button
+                className="wishlist"
+                onClick={() => {
+                  handleAddToWishlist(el.docId);
+                }}
+              >
+                <img src={heart} width="20px" height="20px" alt="" />
+                Whislist
+              </button>
             </div>
           </div>
         ))}

@@ -38,6 +38,8 @@ const Home = () => {
   return (
     <>
       <Header />
+      {/* <Carousel /> */}
+
       <Carousel />
       <div className="article">
         <Card obj={tShirt} title={"T-shirts"} />

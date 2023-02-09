@@ -38,7 +38,7 @@ const AddToCart = () => {
             <button className="closeBtn">
               <img src="./icons/close.png" width="24px" height="24px" alt="" />
             </button>
-            <div className="cart" key={el.id}>
+            <div className="card" key={el.id}>
               <img src={el.image} alt="something" />
               <div className="productDetail">
                 <span className="brand">{el.brand}</span>
