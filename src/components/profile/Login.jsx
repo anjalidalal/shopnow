@@ -4,6 +4,7 @@ import manB from "./manB.png";
 import manP from "./manP.png";
 import womenB from "./womenB.png";
 import womenP from "./womenP.png";
+import cross from "../header/cross.png";
 import { signIn, signOut } from "../../services/firebase";
 import { useSelector } from "react-redux";
 import Footer from "../footer/Footer";
@@ -175,9 +176,18 @@ const Login = () => {
         </>
       ) : (
         <div className="beforeLoggedIn">
-          <div className="module">
+          <div className="modal">
+            <div>
+              <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,ar_3.8,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/new_cultsport_black.svg"
+                alt="cultsport logo"
+                width="135"
+                height="35"
+              />
+              <img src={cross} width="30" height="30" alt="" />
+            </div>
             <button className="signInBtn" onClick={signIn}>
-              <img src="./icons/google.png" width="28px" height="28px" alt="" />{" "}
+              <img src="./icons/google.png" width="20px" height="20px" alt="" />{" "}
               Sign In With Google{" "}
             </button>
             <p>

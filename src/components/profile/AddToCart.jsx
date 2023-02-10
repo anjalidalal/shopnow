@@ -4,24 +4,37 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 const AddToCart = () => {
   const { data, wishlist, user } = useSelector((state) => state);
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState([
+    {
+      image:
+        "https://image.clovia.com/media/clovia-images/images/275x412/clovia-picture-activewear-mid-rise-tights-in-black-127967.jpg",
+      brand: "Cultsport",
+      content: "AbsoluteFit Solid Workout Tights",
+      price: " ₹1999",
+      off: " ₹300",
+      discount: "70% Off",
+      type: "Bottomwear",
+      id: nanoid(),
+    },
+  ]);
   const [counter, setCounter] = useState(1);
 
-  useEffect(() => {
-    wishlist.productsIds !== []
-      ? wishlist.productsIds.map((productId) => {
-          handleAddToCart(productId);
-        })
-      : "";
-  }, []);
-  const handleAddToCart = (docId) => {
-    const wishlists = data.filter((el) => el.docId === docId);
-    setFilteredData(wishlists);
-  };
-  console.log(filteredData);
+  // useEffect(() => {
+  //   wishlist.productsIds !== []
+  //     ? wishlist.productsIds.map((productId) => {
+  //         handleAddToCart(productId);
+  //       })
+  //     : "";
+  // }, []);
+  // const handleAddToCart = (docId) => {
+  //   const wishlists = data.filter((el) => el.docId === docId);
+  //   setFilteredData([...filteredData, wishlists]);
+  // };
+  // console.log(filteredData);
 
   return (
     <>
@@ -70,7 +83,9 @@ const AddToCart = () => {
           </Link>
         </>
       ) : (
-        <div></div>
+        <div style={{ margin: "20px" }}>
+          Cart is empty user is not logged in
+        </div>
       )}
     </>
   );
