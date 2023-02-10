@@ -18,6 +18,7 @@ const App = () => {
           phoneNumber: user.phoneNumber,
         })
       );
+
       dispatch(fetchWishlist(user?.uid));
     });
 

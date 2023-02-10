@@ -18,7 +18,6 @@ const AllProducts = () => {
   const dispatch = useDispatch();
 
   const { user, data } = useSelector((state) => state);
-
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       dispatch(
@@ -32,7 +31,6 @@ const AllProducts = () => {
       );
       dispatch(fetchWishlist(user?.uid));
     });
-
     dispatch(fetchData());
   }, []);
 
@@ -73,21 +71,30 @@ const AllProducts = () => {
                 <span className="discount">{el.discount}</span>
               </p>{" "}
             </div>
-            <div className="buttons">
-              <button className="addToBag">
-                <img src="./icons/bag.png" alt="" width="18px" height="18px" />
-                Add to cart
-              </button>
-              <button
-                className="wishlist"
-                onClick={() => {
-                  handleAddToWishlist(el.docId);
-                }}
-              >
-                <img src={heart} width="20px" height="20px" alt="" />
-                Whislist
-              </button>
-            </div>
+            {user ? (
+              <div className="buttons">
+                <button className="addToBag">
+                  <img
+                    src="./icons/bag.png"
+                    alt=""
+                    width="18px"
+                    height="18px"
+                  />
+                  Add to cart
+                </button>
+                <button
+                  className="wishlist"
+                  onClick={() => {
+                    handleAddToWishlist(el.docId);
+                  }}
+                >
+                  <img src={heart} width="20px" height="20px" alt="" />
+                  Whislist
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         ))}
       </div>
