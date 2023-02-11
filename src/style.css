@@ -405,14 +405,14 @@ label {
     width: 95vw;
   }
   .card {
-    width: 330px;
     margin: 10px;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
   .card > img {
     width: 100%;
-    height: 480px;
+    height: 430px;
+    object-fit: cover;
     border-radius: 8px;
   }
   .heading {

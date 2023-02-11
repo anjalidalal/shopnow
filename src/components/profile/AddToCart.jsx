@@ -1,40 +1,28 @@
 import React from "react";
 import Header from "../header/Header";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { nanoid } from "nanoid";
 
 const AddToCart = () => {
   const { data, wishlist, user } = useSelector((state) => state);
-  const [filteredData, setFilteredData] = useState([
-    {
-      image:
-        "https://image.clovia.com/media/clovia-images/images/275x412/clovia-picture-activewear-mid-rise-tights-in-black-127967.jpg",
-      brand: "Cultsport",
-      content: "AbsoluteFit Solid Workout Tights",
-      price: " ₹1999",
-      off: " ₹300",
-      discount: "70% Off",
-      type: "Bottomwear",
-      id: nanoid(),
-    },
-  ]);
+  const [filteredData, setFilteredData] = useState([]);
   const [counter, setCounter] = useState(1);
+  const dispatch = useDispatch();
+  console.log(wishlist);
+  useEffect(() => {
+    wishlist.productsIds.map((id) => {
+      handleWishlistProduct(id);
+    });
+  }, [wishlist]);
 
-  // useEffect(() => {
-  //   wishlist.productsIds !== []
-  //     ? wishlist.productsIds.map((productId) => {
-  //         handleAddToCart(productId);
-  //       })
-  //     : "";
-  // }, []);
-  // const handleAddToCart = (docId) => {
-  //   const wishlists = data.filter((el) => el.docId === docId);
-  //   setFilteredData([...filteredData, wishlists]);
-  // };
-  // console.log(filteredData);
+  const handleWishlistProduct = (id) => {
+    const filter = data.filter((el) => el.docId === id);
+    console.log(filter);
+    setFilteredData(filter);
+    console.log(filteredData);
+  };
 
   return (
     <>

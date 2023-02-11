@@ -27,7 +27,7 @@ export const Reducer = (state = initialState, { type, payload }) => {
     // case GET_CART:
     //   return {
     //     ...state,
-    //     data: payload,
+    //     cart: payload,
     //   };
     default:
       return state;

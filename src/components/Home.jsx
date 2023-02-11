@@ -33,7 +33,7 @@ const Home = () => {
 
     const bottomwear = data.filter((el) => el.type === "Bottomwear");
     setBottomWear(bottomwear);
-  }, []);
+  }, [data]);
 
   return (
     <>
