@@ -61,7 +61,7 @@ const AllProducts = () => {
       </div>
       <div className="allProducts">
         {data.map((el) => (
-          <div className="card" key={el.id}>
+          <div className="productCard" key={el.id}>
             <img src={el.image} alt="something" />
             <div className="productDetail">
               <span className="brand">{el.brand}</span>
