@@ -6,8 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const SingleProduct = () => {
   const { user, singleProduct } = useSelector((state) => state);
-  console.log(singleProduct);
-  console.log(singleProduct.image);
+
   return (
     <>
       <Header />
@@ -15,7 +14,7 @@ const SingleProduct = () => {
         <div className={styles.singleProductImage}>
           <img src={singleProduct.image} alt="something" />
         </div>
-        <div>
+        <div className={styles.productInfo}>
           <div className={styles.singleProductDetails}>
             <span>{singleProduct.brand}</span>
             <p className={styles.singleProductContent}>

@@ -8,9 +8,13 @@
   margin: auto;
   padding: 10px;
 }
-
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
 .singleProductImage {
-  width: 300px;
+  width: 100%;
 }
 .singleProductImage > img {
   width: 100%;
@@ -154,4 +158,25 @@
   color: hwb(0 29% 71% / 0.918);
   font-size: 16px;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .singleProduct {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  .productInfo {
+    width: 70%;
+    margin: 0px 20px;
+  }
+  .singleProductImage {
+    width: 100%;
+    margin: 0px 10px;
+  }
+  .singleProductImage > img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
 }
