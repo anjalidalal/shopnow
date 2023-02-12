@@ -88,7 +88,10 @@
   font-weight: 500;
   cursor: pointer;
 }
-.productDetailList {
+.productDetailList,
+.pincodeList,
+.specificationsList,
+.fabricList {
   color: #4a4a4a;
   text-align: left;
   opacity: 0.92;
@@ -98,12 +101,18 @@
   padding: 0px 20px;
 }
 
-.productDetailList > ul {
+.productDetailList > ul,
+.pincodeList > ul,
+.specificationsList > ul,
+.fabricList > ul {
   margin: 10px 0;
 }
-.productDetailList > ul > li {
+.productDetailList > ul > li,
+.pincodeList > ul > li,
+.specificationsList > ul > li,
+.fabricList > ul > li {
   padding: 0px 5px;
-  font-size: 15px;
+  font-size: 14px;
 }
 .pincodeInput {
   display: flex;
@@ -125,4 +134,24 @@
   color: #bfc0c6;
   pointer-events: none;
   font-weight: 500;
+}
+.bold {
+  color: #000;
+  font-weight: 600;
+}
+.fabricDiv {
+  margin: 10px;
+  border-top: 2px solid #d8d8d8;
+  border-bottom: 2px solid #d8d8d8;
+  padding: 25px 0px 0px 0px;
+}
+.specifications {
+  margin: 10px;
+  padding: 25px 0px 0px 0px;
+}
+.fabricDiv > p,
+.specifications > p {
+  color: hwb(0 29% 71% / 0.918);
+  font-size: 16px;
+  font-weight: 600;
 }

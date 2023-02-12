@@ -86,7 +86,7 @@ const SingleProduct = () => {
               </ul>
             </div>
           </div>
-          <div class="style-prefix-skazhp">
+          <div>
             <div className={styles.pincodeInput}>
               {" "}
               <input
@@ -99,18 +99,38 @@ const SingleProduct = () => {
               />
               <button>CHECK</button>
             </div>
-            <ul>
-              <li>Free delivery within 5-7 days</li>
-              <li>Easy 30 days return available</li>
-              <li>30 days exchange available</li>
-              <li>
-                <span>
-                  {" "}
-                  To minimise contact between you and the delivery partner, Pay
-                  on Delivery option is temporarily disabled.
-                </span>
-              </li>
-            </ul>
+            <div className={styles.pincodeList}>
+              <ul>
+                <li>Free delivery within 5-7 days</li>
+                <li>Easy 30 days return available</li>
+                <li>30 days exchange available</li>
+                <li>
+                  <span className={styles.bold}>
+                    {" "}
+                    To minimise contact between you and the delivery partner,
+                    Pay on Delivery option is temporarily disabled.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <div className={styles.fabricDiv}>
+              <p>Fabric</p>
+              <div className={styles.fabricList}>
+                <ul>
+                  <li>100% Polyester</li>
+                </ul>
+              </div>
+            </div>
+            <div className={styles.specifications}>
+              <p>Specifications</p>
+              <div className={styles.specificationsList}>
+                <ul>
+                  <li>Country of Origin: India</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
