@@ -1,4 +1,10 @@
-import { GET_USER, GET_DATA, GET_WISHLIST, GET_CART } from "./ActionType";
+import {
+  GET_USER,
+  GET_DATA,
+  GET_WISHLIST,
+  GET_CART,
+  GET_SINGLE_PRODUCT,
+} from "./ActionType";
 import firebase from "../../services/firebase";
 import { database } from "../../services/firebase";
 
@@ -84,4 +90,18 @@ const addToWishlist = (wishlistDocId, newProductId) => async (dispatch) => {
 //   };
 // };
 
-export { fetchData, getData, addToWishlist, fetchWishlist, getWishlist };
+const getSingleProduct = (data) => {
+  return {
+    type: GET_SINGLE_PRODUCT,
+    payload: data,
+  };
+};
+
+export {
+  fetchData,
+  getData,
+  addToWishlist,
+  fetchWishlist,
+  getWishlist,
+  getSingleProduct,
+};

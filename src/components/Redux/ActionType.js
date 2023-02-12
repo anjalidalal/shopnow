@@ -7,3 +7,5 @@ export const GET_DATA = "GET_DATA";
 export const GET_TSHIRT = "GET_TSHIRT";
 
 export const GET_WISHLIST = "GET_WISHLIST";
+
+export const GET_SINGLE_PRODUCT = "GET_SINGLE_PRODUCT";

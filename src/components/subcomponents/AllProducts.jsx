@@ -10,8 +10,10 @@ import {
   fetchData,
   addToWishlist,
   fetchWishlist,
+  getSingleProduct,
 } from "../Redux/Action";
 import { auth, database } from "../../services/firebase";
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   // const [whislist, setWishlist] = useState(false);
@@ -38,6 +40,10 @@ const AllProducts = () => {
     dispatch(addToWishlist(user?.id, docId));
   };
 
+  const handleSingleProduct = (product) => {
+    dispatch(getSingleProduct(product));
+  };
+
   return (
     <>
       <Header />
@@ -61,41 +67,59 @@ const AllProducts = () => {
       </div>
       <div className="allProducts">
         {data.map((el) => (
-          <div className="productCard" key={el.id}>
-            <img src={el.image} alt="something" />
-            <div className="productDetail">
-              <span className="brand">{el.brand}</span>
-              <p className="content">{el.content}</p>
-              <p className="price">
-                {el.price} <span className="off">{el.off}</span>{" "}
-                <span className="discount">{el.discount}</span>
-              </p>{" "}
-            </div>
-            {user ? (
-              <div className="buttons">
-                <button className="addToBag">
-                  <img
-                    src="./icons/bag.png"
-                    alt=""
-                    width="18px"
-                    height="18px"
-                  />
-                  Add to cart
-                </button>
-                <button
-                  className="wishlist"
-                  onClick={() => {
-                    handleAddToWishlist(el.docId);
-                  }}
-                >
-                  <img src={heart} width="20px" height="20px" alt="" />
-                  Whislist
-                </button>
+          <Link to="/product" key={el.id}>
+            <div
+              className="productCard"
+              onClick={() => {
+                const singleProduct = {
+                  image: el.image,
+                  brand: el.brand,
+                  content: el.content,
+                  price: el.price,
+                  off: el.off,
+                  discount: el.discount,
+                  type: el.type,
+                  id: el.id,
+                };
+                handleSingleProduct(singleProduct);
+              }}
+              key={el.id}
+            >
+              <img src={el.image} alt="something" />
+              <div className="productDetail">
+                <span className="brand">{el.brand}</span>
+                <p className="content">{el.content}</p>
+                <p className="price">
+                  {el.price} <span className="off">{el.off}</span>{" "}
+                  <span className="discount">{el.discount}</span>
+                </p>{" "}
               </div>
-            ) : (
-              ""
-            )}
-          </div>
+              {user ? (
+                <div className="buttons">
+                  <button className="addToBag">
+                    <img
+                      src="./icons/bag.png"
+                      alt=""
+                      width="18px"
+                      height="18px"
+                    />
+                    Add to cart
+                  </button>
+                  <button
+                    className="wishlist"
+                    onClick={() => {
+                      handleAddToWishlist(el.docId);
+                    }}
+                  >
+                    <img src={heart} width="20px" height="20px" alt="" />
+                    Whislist
+                  </button>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          </Link>
         ))}
       </div>
       <Footer />

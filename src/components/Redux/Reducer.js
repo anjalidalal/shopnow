@@ -1,12 +1,17 @@
-import { GET_USER, GET_DATA, GET_WISHLIST, GET_CART } from "./ActionType";
+import {
+  GET_USER,
+  GET_DATA,
+  GET_WISHLIST,
+  GET_CART,
+  GET_SINGLE_PRODUCT,
+} from "./ActionType";
 
 const initialState = {
   user: null,
   data: [],
   wishlist: {},
-  cart: [],
+  singleProduct: [],
 };
-console.log(initialState.wishlist);
 export const Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case GET_USER:
@@ -24,11 +29,12 @@ export const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         wishlist: payload,
       };
-    // case GET_CART:
-    //   return {
-    //     ...state,
-    //     cart: payload,
-    //   };
+    case GET_SINGLE_PRODUCT:
+      return {
+        ...state,
+        singleProduct: payload,
+      };
+
     default:
       return state;
   }
