@@ -58,23 +58,23 @@ const SingleProduct = () => {
               fabric keeps you feeling cool and dry,
             </p>{" "}
             <p className={styles.bestSeller}>Best Seller</p>
-            <div class={styles.productSize}>
-              <div class={styles.titleContainer}>
-                <div class={styles.title}>Choose Size</div>
-                <div class={styles.action}>(Size Guide)</div>
+            <div className={styles.productSize}>
+              <div className={styles.titleContainer}>
+                <div className={styles.title}>Choose Size</div>
+                <div className={styles.action}>(Size Guide)</div>
               </div>
-              <div class={styles.sizeContainer}>
-                <div class={styles.size}>S</div>
-                <div class={styles.size}>M</div>
-                <div class={styles.size}>L</div>
-                <div class={styles.size}>XL</div>
-                <div class={styles.size}>XXL</div>
+              <div className={styles.sizeContainer}>
+                <div className={styles.size}>S</div>
+                <div className={styles.size}>M</div>
+                <div className={styles.size}>L</div>
+                <div className={styles.size}>XL</div>
+                <div className={styles.size}>XXL</div>
               </div>
             </div>{" "}
           </div>
           <div style={{ marginTop: "10px" }}>
             <div className={styles.productDetailTitle}>PRODUCT DETAILS</div>
-            <div class={styles.productDetailList}>
+            <div className={styles.productDetailList}>
               <ul>
                 <li>Colour: Green</li>
                 <li>Fabric: 100% Polyester</li>
@@ -88,14 +88,7 @@ const SingleProduct = () => {
           <div>
             <div className={styles.pincodeInput}>
               {" "}
-              <input
-                type="text"
-                placeholder="Enter your pincode"
-                value=""
-                maxlength="6"
-                inputmode="numeric"
-                pattern="[0-9],*"
-              />
+              <input type="text" placeholder="Enter your pincode" value="" />
               <button>CHECK</button>
             </div>
             <div className={styles.pincodeList}>

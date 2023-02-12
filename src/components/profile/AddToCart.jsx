@@ -9,8 +9,8 @@ const AddToCart = () => {
   const { data, wishlist, user } = useSelector((state) => state);
   const [filteredData, setFilteredData] = useState([]);
   const [counter, setCounter] = useState(1);
-  const dispatch = useDispatch();
-  console.log(wishlist);
+  // const dispatch = useDispatch();
+
   useEffect(() => {
     wishlist.productsIds.map((id) => {
       handleWishlistProduct(id);
@@ -19,9 +19,7 @@ const AddToCart = () => {
 
   const handleWishlistProduct = (id) => {
     const filter = data.filter((el) => el.docId === id);
-    console.log(filter);
     setFilteredData(filter);
-    console.log(filteredData);
   };
 
   return (
