@@ -12,15 +12,16 @@ const AddToCart = () => {
   // const dispatch = useDispatch();
 
   useEffect(() => {
-    wishlist.productsIds.map((id) => {
+    wishlist?.productsIds?.map((id) => {
       handleWishlistProduct(id);
     });
   }, [wishlist]);
 
   const handleWishlistProduct = (id) => {
-    const filter = data.filter((el) => el.docId === id);
+    const filter = data?.filter((el) => el.docId === id);
     setFilteredData(filter);
   };
+  console.log(filteredData, wishlist, data);
 
   return (
     <>
