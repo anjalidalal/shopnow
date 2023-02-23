@@ -94,7 +94,7 @@ const Login = () => {
             </div>
             <div className="right">
               <img src={user.photo} className="img" alt="" />
-              <h1>Pofile</h1>
+              <h1>Profile</h1>
               <div className="form">
                 <label htmlFor="">
                   Name
