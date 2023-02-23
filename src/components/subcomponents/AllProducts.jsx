@@ -84,7 +84,7 @@ const AllProducts = () => {
             }}
             key={el.id}
           >
-            <Link to="/product" key={el.id}>
+            <Link to={`/product/${el.id}`} key={el.id}>
               <img src={el.image} className="productImage" alt="something" />
             </Link>
             <div className="productDetail">

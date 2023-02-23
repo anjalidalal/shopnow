@@ -3,9 +3,14 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import styles from "./singleProduct.module.css";
 import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 
 const SingleProduct = () => {
   const { user, singleProduct } = useSelector((state) => state);
+  console.log(singleProduct.id);
+  //const id = singleProduct.id;
+
+  const { id } = useParams();
 
   return (
     <>
