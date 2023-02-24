@@ -5,11 +5,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const AddToCart = () => {
+const Cart = () => {
   const { data, wishlist, user } = useSelector((state) => state);
   const [filteredData, setFilteredData] = useState([]);
   const [counter, setCounter] = useState(1);
-  // const dispatch = useDispatch();
 
   useEffect(() => {
     wishlist?.productsIds?.map((id) => {
@@ -17,11 +16,13 @@ const AddToCart = () => {
     });
   }, [wishlist]);
 
-  const handleWishlistProduct = (id) => {
-    const filter = data?.filter((el) => el.docId === id);
-    setFilteredData(filter);
-  };
-  console.log(filteredData, wishlist, data);
+  function handleWishlistProduct(id) {
+    data?.filter((el) =>
+      el.docId === id ? setFilteredData([...filteredData, el]) : []
+    );
+  }
+
+  console.log(filteredData, wishlist);
 
   return (
     <>
@@ -36,7 +37,7 @@ const AddToCart = () => {
         <>
           {" "}
           <div className="container">
-            {filteredData.map((el) => (
+            {filteredData?.map((el) => (
               <div key={el.id} className="cartBox">
                 <button className="closeBtn">
                   <img
@@ -78,4 +79,4 @@ const AddToCart = () => {
   );
 };
 
-export default AddToCart;
+export default Cart;

@@ -7,13 +7,13 @@ const Footer = () => {
     <>
       <Faqs />
       <div className={styles.footer}>
-        <div>
+        <div className={styles.cultsportFooterContainer}>
           <img
             src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_150,ar_3.87,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/vman-and-white-cultsport-text.svg"
             alt="vman-and-white-cultsport-text"
             width="150"
             height="38.75968992248062"
-            style={{ margin: "20px 0px 30px 0px" }}
+            className={styles.cultLogo}
           />
           <p className={styles.detail}>
             cultsport offer top quality, best in class products which provide a
@@ -28,7 +28,7 @@ const Footer = () => {
           <p>Terms & conditions</p>
           <p>Download andriod app</p>
         </div>
-        <div>
+        <div className={styles.footerButtons}>
           <div className={styles.storeBtn}>
             <img src="./icons/apple.png" alt="" />
             <p>

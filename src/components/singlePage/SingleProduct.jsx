@@ -7,10 +7,9 @@ import { useParams } from "react-router-dom";
 
 const SingleProduct = () => {
   const { user, singleProduct } = useSelector((state) => state);
-  console.log(singleProduct.id);
-  //const id = singleProduct.id;
 
   const { id } = useParams();
+  console.log(id);
 
   return (
     <>

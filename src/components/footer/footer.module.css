@@ -17,15 +17,15 @@
   margin: 20px 0px;
   border: 1px solid #fff;
   border-radius: 9px;
-  padding: 10px 5px;
+  padding: 8px;
   height: 56;
-  width: 178px;
+  width: 165px;
   display: flex;
   align-items: center;
 }
 .storeBtn > img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 .storeBtn > p {
   padding-left: 7px;
@@ -35,13 +35,13 @@
   font-weight: 300;
 }
 .store {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 500;
 }
 .app {
   display: flex;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .logo {
   border-radius: 50%;
@@ -53,8 +53,8 @@
   height: 35px;
 }
 .logo > img {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 .faq {
   padding: 40px 15px;
@@ -132,6 +132,10 @@ button {
   color: #ff3278;
   padding: 0px 15px;
 }
+.cultLogo {
+  margin: 20px 0px 30px 0px;
+}
+
 @media (min-width: 768px) {
   .headingTwo {
     font-weight: 600;
@@ -153,5 +157,31 @@ button {
     padding: 0 0 15px 50px;
     width: 60%;
     font-size: 16px;
+  }
+  .cultsportFooterContainer {
+    width: 235px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 30px;
+  }
+  .list {
+    margin-top: 0px;
+  }
+  .list > p {
+    margin-bottom: 25px;
+  }
+  .cultLogo {
+    margin-top: 0px;
+  }
+  .storeBtn {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  .footerButtons {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
   }
 }
